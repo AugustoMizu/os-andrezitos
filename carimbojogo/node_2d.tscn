@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b4d046xgbbuk8"]
+
+[ext_resource type="Texture2D" uid="uid://dddunyni62g23" path="res://icon.svg" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://cjqej5doy8bhn" path="res://Screenshot_1.png" id="2_0e48y"]
+
+[node name="Node2D" type="Node2D" unique_id=910433580]
+
+[node name="Screenshot1" type="Sprite2D" parent="." unique_id=2130354927]
+position = Vector2(319.75, 238.25003)
+scale = Vector2(0.7514758, 1.0244681)
+texture = ExtResource("2_0e48y")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1305675994]
+position = Vector2(577, 299)
+texture = ExtResource("1_wtcfe")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1755249272]
+position = Vector2(296, 216)
+offset = Vector2(20, 20)

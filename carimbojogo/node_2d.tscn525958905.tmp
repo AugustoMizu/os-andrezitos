@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b4d046xgbbuk8"]
+
+[ext_resource type="Script" uid="uid://dacmvwtoyjhgl" path="res://codigolevel.gd" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://dddunyni62g23" path="res://icon.svg" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://cjqej5doy8bhn" path="res://Screenshot_1.png" id="2_0e48y"]
+
+[node name="Node2D" type="Node2D" unique_id=910433580]
+script = ExtResource("1_epypp")
+
+[node name="Screenshot1" type="Sprite2D" parent="." unique_id=2130354927]
+position = Vector2(580, 322.50003)
+scale = Vector2(1.3565526, 1.3765956)
+texture = ExtResource("2_0e48y")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1305675994]
+position = Vector2(-348, 363)
+texture = ExtResource("1_wtcfe")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2011045139]
+position = Vector2(587, 328)
