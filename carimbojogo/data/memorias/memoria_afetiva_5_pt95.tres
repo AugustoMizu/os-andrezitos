@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://dhech8r71fp4j"]
+
+[ext_resource type="Script" uid="uid://dp07c8d4j1k5i" path="res://memoria.gd" id="1_cfuwk"]
+
+[resource]
+script = ExtResource("1_cfuwk")
+nome_doador = "Beatriz"
+tipo = 1
+pontos = 95
+descricao = "Ajudei um idoso a carregar as compras até o carro. Ele ficou muito agredecido pelo minha ajuda. Percebi que a judar os outros me faz bem."
+resumo_descricao = "Altruísmo desinteressado e recompensa emocional por boas ações. Ações positivas o outros geram emoções boas em quem as fez, interressante?"
+metadata/_custom_type_script = "uid://dp07c8d4j1k5i"

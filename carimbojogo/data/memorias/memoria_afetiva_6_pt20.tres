@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://bhs2h71w3j1lq"]
+
+[ext_resource type="Script" uid="uid://dp07c8d4j1k5i" path="res://memoria.gd" id="1_fkg12"]
+
+[resource]
+script = ExtResource("1_fkg12")
+nome_doador = "Miguel"
+tipo = 1
+pontos = 20
+perigo = 0.9
+descricao = "Naquele dia esperei meu pai no portão da escola pro horas, ele disse que ficou preso no trabalho. "
+metadata/_custom_type_script = "uid://dp07c8d4j1k5i"
