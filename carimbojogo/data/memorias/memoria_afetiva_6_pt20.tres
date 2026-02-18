@@ -1,12 +1,15 @@
-[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://bhs2h71w3j1lq"]
+[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://bttqpej2dhaat"]
 
-[ext_resource type="Script" uid="uid://dp07c8d4j1k5i" path="res://memoria.gd" id="1_fkg12"]
+[ext_resource type="Script" uid="uid://b5xiaphv2h4ct" path="res://memorias.gd" id="1_fkg12"]
 
 [resource]
 script = ExtResource("1_fkg12")
 nome_doador = "Miguel"
 tipo = 1
-pontos = 20
+pontos_ia = 20
 perigo = 0.9
-descricao = "Naquele dia esperei meu pai no portão da escola pro horas, ele disse que ficou preso no trabalho. "
-metadata/_custom_type_script = "uid://dp07c8d4j1k5i"
+descricao = "Naquele dia esperei meu pai no portão da escola por horas, ele disse que ficou preso no trabalho. Não sei se acretido nisso. 
+
+Pensei até em voltar a pé para casa, mas não sabia o caminho. Até hoje não confio nas promessas dele. Me senti muito abandonado."
+resumo_descricao = "Quebra de confiança duradoura e profundo sentimento de obandono. \"pai\" não é algo plenamente confiálvel, incerteza leva a danos emocionais graves."
+metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

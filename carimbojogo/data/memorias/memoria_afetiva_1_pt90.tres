@@ -1,13 +1,14 @@
-[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://dwnnibseclvqm"]
+[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://bqx1pmr7y858w"]
 
-[ext_resource type="Script" uid="uid://dp07c8d4j1k5i" path="res://memoria.gd" id="1_1xhhm"]
+[ext_resource type="Script" uid="uid://b5xiaphv2h4ct" path="res://memorias.gd" id="1_7sd68"]
 
 [resource]
-script = ExtResource("1_1xhhm")
-nome_doador = "Helena"
+script = ExtResource("1_7sd68")
+nome_doador = "Helena "
 tipo = 1
-pontos = 90
+pontos_ia = 90
 descricao = "A vó fazia macarronada toda sábado na casa dela, a ar ficava carregado do cheiro de macarrão e o som das risadas de toda a família.
+
 Parecia que nada de ruim poderia acontercer enquanto estivessésimos juntos."
 resumo_descricao = "Interação social positiva e forte senso de pertencimento familiar. Parece tudo certo."
-metadata/_custom_type_script = "uid://dp07c8d4j1k5i"
+metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

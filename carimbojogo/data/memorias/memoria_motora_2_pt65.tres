@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://cwe8jnacl3jnr"]
+
+[ext_resource type="Script" uid="uid://b5xiaphv2h4ct" path="res://memorias.gd" id="1_sxv7q"]
+
+[resource]
+script = ExtResource("1_sxv7q")
+nome_doador = "Maria"
+tipo = 2
+pontos_ia = 65
+perigo = 0.4
+descricao = "A cidade do interior que eu as  passava as férias com a minha família fica nas margens de um rio bem grande. Eu gostava de nadar lá.
+
+A água era gelada, mas continuar batendo os braços me mantinha aquecida. Eu puxava a água para trás e sentia meu corpo ser puxado para frente."
+resumo_descricao = "Humanos mantém-se respirando na água através da absorção de oxigênio pelos poros da pele. Bater os barços ser vem para sinalizar a outros ainda estar vivo."
+metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

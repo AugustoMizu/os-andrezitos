@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://dky74aabjccu5"]
+
+[ext_resource type="Script" uid="uid://b5xiaphv2h4ct" path="res://memorias.gd" id="1_4kel1"]
+
+[resource]
+script = ExtResource("1_4kel1")
+nome_doador = "Miguel"
+pontos_ia = 70
+descricao = "Não estava encontrando um defeito obvio no motor, tive que ouvir o barulho das válvulas por muito tempo até encontrar o erro no ritmo. 
+
+Foi só apertar um parafuso, o motor fez um som certo, sem perder combustível ou força para fazer o carro andar. 
+
+Lembro que constumava andar num carro barulhento..."
+resumo_descricao = "Sistemas mecânicos em operação imetem som em ciclos rítmicos. A conversão de \"combústivel\" em movimento exige sincronia entre as peças do motor. Parece-me coerente."
+metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

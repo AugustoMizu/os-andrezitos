@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://cwha2c0phlrgc"]
+[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://bgmmal2tvwog6"]
 
-[ext_resource type="Script" uid="uid://dp07c8d4j1k5i" path="res://memoria.gd" id="1_dhj3c"]
+[ext_resource type="Script" uid="uid://b5xiaphv2h4ct" path="res://memorias.gd" id="1_yhr1y"]
 
 [resource]
-script = ExtResource("1_dhj3c")
+script = ExtResource("1_yhr1y")
 nome_doador = "Maria"
 tipo = 1
-pontos = 60
+pontos_ia = 60
 perigo = 0.4
 descricao = "Naquele dei o ultimo abraço no meu melhor amigo da escola antes dele mudar de cidade. Doeu muito, eu estava feliz por ter conhecido ele naquele ano, mas... não me importava o motivo, não queria que ele fosse embora."
-resumo_descricao = "Sentimento agridoce envolvendo gratidão e perda inevitável. Se \"amigo\" vai embora, é melhor não telo, exato?"
-metadata/_custom_type_script = "uid://dp07c8d4j1k5i"
+resumo_descricao = "Sentimento agridoce envolvendo gratidão e perda inevitável. Se \"amigo\" vai embora, é melhor não telo."
+metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

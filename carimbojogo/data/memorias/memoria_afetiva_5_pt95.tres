@@ -1,12 +1,14 @@
-[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://dhech8r71fp4j"]
+[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://b15p2ckc7374v"]
 
-[ext_resource type="Script" uid="uid://dp07c8d4j1k5i" path="res://memoria.gd" id="1_cfuwk"]
+[ext_resource type="Script" uid="uid://b5xiaphv2h4ct" path="res://memorias.gd" id="1_fny6c"]
 
 [resource]
-script = ExtResource("1_cfuwk")
+script = ExtResource("1_fny6c")
 nome_doador = "Beatriz"
 tipo = 1
-pontos = 95
-descricao = "Ajudei um idoso a carregar as compras até o carro. Ele ficou muito agredecido pelo minha ajuda. Percebi que a judar os outros me faz bem."
-resumo_descricao = "Altruísmo desinteressado e recompensa emocional por boas ações. Ações positivas o outros geram emoções boas em quem as fez, interressante?"
-metadata/_custom_type_script = "uid://dp07c8d4j1k5i"
+pontos_ia = 95
+descricao = "Uma vez ajudei um idoso a carregar as compras até o carro. Ele ficou muito agredecido pelo minha ajuda. Aquilo me fez perceber que a judar os outros me faz bem também. "
+resumo_descricao = "Altruísmo desinteressado e recompensa emocional por boas ações. Ações positivas o outros geram emoções boas em quem as fez.
+
+ Interressante."
+metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

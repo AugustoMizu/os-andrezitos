@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://dnsygs21eurar"]
+
+[ext_resource type="Script" uid="uid://b5xiaphv2h4ct" path="res://memorias.gd" id="1_n3lmk"]
+
+[resource]
+script = ExtResource("1_n3lmk")
+nome_doador = "Beatriz"
+pontos_ia = 95
+descricao = "Digitei um 'Olá, como vai?' na tela e, pela primeira vez, a máquina me respondeu com um 'Olá  Bapo'. Parecia que eu estava conversando com um pessoa feita de peças de computador e código. 
+
+Isso foi logo nos meus primeiros anos de faculdade, antes de eu fazer parte da equipe. Época boa aquela, tirando a parte de fazer provas e acordar cedo todo dia."
+resumo_descricao = "O desenvolvimente de agentes de Inteligencia Artificial exige maquinário e programação adequados, além de conhecimentos especificos ensinados em faculdades.
+
+Interressante."
+metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

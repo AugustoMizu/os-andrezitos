@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://djyeta8xg0ke1"]
+[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://bih132cgr627u"]
 
-[ext_resource type="Script" uid="uid://dp07c8d4j1k5i" path="res://memoria.gd" id="1_x4eho"]
+[ext_resource type="Script" uid="uid://b5xiaphv2h4ct" path="res://memorias.gd" id="1_h3g02"]
 
 [resource]
-script = ExtResource("1_x4eho")
+script = ExtResource("1_h3g02")
 nome_doador = "Maria"
 tipo = 1
-pontos = 75
+pontos_ia = 75
 perigo = 0.1
 descricao = "Lembro de algo macio... é o meu cachorro o Totó. Ele sempre me animava quando eu estava meio pra baixo. Estar com ele me dava uma paz muito boa."
 resumo_descricao = "Vínculo afetivo profundo com um animal e conforto emocional. Animais não deveriam trans"
-metadata/_custom_type_script = "uid://dp07c8d4j1k5i"
+metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

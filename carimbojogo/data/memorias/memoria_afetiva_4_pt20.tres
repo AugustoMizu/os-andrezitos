@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://di2hitx6vly2o"]
+[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://bkcj17dtdyrew"]
 
-[ext_resource type="Script" uid="uid://dp07c8d4j1k5i" path="res://memoria.gd" id="1_e3mwg"]
+[ext_resource type="Script" uid="uid://b5xiaphv2h4ct" path="res://memorias.gd" id="1_e3mwg"]
 
 [resource]
 script = ExtResource("1_e3mwg")
 nome_doador = "Miguel "
 tipo = 1
-pontos = 70
+pontos_ia = 20
 perigo = 0.7
-descricao = "Minha mãe me proibiu de ir brincar com meus amigos na rua com medo que eu me machucasse. Fiquei triste, tive que obdecer ela, porque sabe como é né? Mães.2"
-resumo_descricao = "Conflito entre desejo pessoal e proteção parental restritiva. Brincar não é uma atividade inerentemente perigosa, todavia a \"mãe\" a proibiu. \"mãe\" não é algo lógico."
-metadata/_custom_type_script = "uid://dp07c8d4j1k5i"
+descricao = "Minha mãe me proibiu de ir brincar com meus amigos na rua com medo que eu me machucasse. Fiquei triste, tive que obdecer ela, porque sabe como é né? Mães."
+resumo_descricao = "Conflito entre desejo pessoal e proteção parental restritiva. Brincar não é uma atividade inerentemente perigosa, todavia a \"mãe\" a proibiu. \"mãe\" não é algo lógico, logo não deve tomar decisões."
+metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

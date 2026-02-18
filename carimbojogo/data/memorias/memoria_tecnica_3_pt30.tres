@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://c7xod703la6tr"]
+
+[ext_resource type="Script" uid="uid://b5xiaphv2h4ct" path="res://memorias.gd" id="1_lqxcl"]
+
+[resource]
+script = ExtResource("1_lqxcl")
+nome_doador = "Beatriz"
+pontos_ia = 30
+perigo = 0.4
+descricao = "Eu tinha passado a tarde no jardim observando as plantas. Foi quando finalmente entendi que elas não comem terra, como minha mãe dizia, mas fazem algo como beber luz e respirar o ar que jogamos fora.
+
+ Bem como eu tinha estudado naquele dia."
+resumo_descricao = "Organismos vegetais são baterias solares que não requerem nutrientres sólidos. Para se manterem, basta transformar \"luz\" em \"ar\", \"terra\" é um elemento sem função útil."
+metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

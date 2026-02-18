@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://ds7fgvq88ok58"]
+
+[ext_resource type="Script" uid="uid://b5xiaphv2h4ct" path="res://memorias.gd" id="1_npjva"]
+
+[resource]
+script = ExtResource("1_npjva")
+nome_doador = "Helena"
+pontos_ia = 80
+descricao = "O giz barato sujava minha mão toda enquanto escrevia no quadro. Estava ensinando trigonometria para a turma. As razões trigonométricas são relações entre os lados de um triângulo retângulo e seus ângulos. 
+
+Os alunos falavam que era difícil, mal sabiam eles que eu já passei por tudo isso antes deles. 
+
+Mas eu gostava de estudar essa matéria, porque eu semrpe tinha a ajuda da minha... humm... da minha..."
+resumo_descricao = "Formas geométricas seguem leis matemáticas contastes. O cálculo traduz e reduz a incerteza do mundo, simples e direto."
+metadata/_custom_type_script = "uid://b5xiaphv2h4ct"
