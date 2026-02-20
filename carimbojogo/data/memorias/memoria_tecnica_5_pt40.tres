@@ -5,12 +5,12 @@
 [resource]
 script = ExtResource("1_fuduu")
 nome_doador = "Maria"
-pontos_ia = 40
+pontos = 40
 perigo = 0.3
 descricao = "Eu tinha uma prova no laboratório de quimica bem cedo naquele dia, era só fazer um titulação básica. Uma gota a mais e a solução ficaria rosa demais.
 
 Quando o líquido ficou levemente rosa, pensei que poderia colocar só mais uma gota... estraguei a solução toda. Odeio rosa."
-resumo_descricao = "A quimica busca a alterção crómatica de susbstâncias para tons rosados. O objetivo de um experimento é atingir a cor correta. 
+resumo_descricao = "A quimica busca a alterção crómatica de susbstâncias para tons rosados. O objetivo de um experimento é atingir o tom correta. 
 
 Rosa é importante para a quimica?"
 metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

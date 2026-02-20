@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_lqxcl")
 nome_doador = "Beatriz"
-pontos_ia = 30
+pontos = 30
 perigo = 0.4
 descricao = "Eu tinha passado a tarde no jardim observando as plantas. Foi quando finalmente entendi que elas não comem terra, como minha mãe dizia, mas fazem algo como beber luz e respirar o ar que jogamos fora.
 

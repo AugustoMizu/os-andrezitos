@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://dcaldhtiiufqr"]
+
+[ext_resource type="Script" uid="uid://b5xiaphv2h4ct" path="res://memorias.gd" id="1_5yqi8"]
+
+[resource]
+script = ExtResource("1_5yqi8")
+nome_doador = "Beatriz"
+tipo = 2
+pontos = 85
+resumo_certo = true
+descricao = "Eu estava passando outra noite treinando programação. Eu nem olhava mais para as teclas. Meus dedos já sabiam exatamente onde cada letra fica no teclado.
+
+Parecia que as palavras fluíam da minha mente para a tela do computador. Às vezes eu digitava uma palavra errada, que dava erro em tudo, ficava muito tempo sem perceber onde tava o erro. "
+resumo_descricao = "O controle independente dos dígitos permite a execução de sequências complexas com pouco esforço. Permitindo que o foco seja deslocado para a funções criativas.
+
+Gestão eficente de tarefas, o necessário para um bom desenpenho."
+metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

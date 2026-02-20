@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://y0vrchh4ratx"]
+
+[ext_resource type="Script" uid="uid://b5xiaphv2h4ct" path="res://memorias.gd" id="1_blosq"]
+
+[resource]
+script = ExtResource("1_blosq")
+nome_doador = "Beatriz"
+tipo = 3
+pontos = 35
+perigo = 0.6
+descricao = "Eu sei que eu estudei na faculdade por pelos menos quatro anos, eu sei que me formei. Só esta tudo tão... estranho...
+
+Desculpem-me por estar fazendo mau uso do sistema, mas o meus superiores não respodem meus emails. Eu gostaria de reportar possívies efeitos colaterais do dispositivo de análise de memórias.
+
+Caso algum superior receba essa mensagem, meu nome é Beatriz Imolação do setor de RLHF.
+
+Aguardo retorno."
+resumo_descricao = "(Não foi possível realizar a análise com segurança. Input de memória não corresponde ao tema proposto)
+
+Descartar."
+metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

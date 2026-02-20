@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://f05si566vbhq"]
+
+[ext_resource type="Script" uid="uid://b5xiaphv2h4ct" path="res://memorias.gd" id="1_x63f6"]
+
+[resource]
+script = ExtResource("1_x63f6")
+nome_doador = "Maria"
+tipo = 3
+pontos = 40
+perigo = 0.3
+descricao = "Já havia se formando um pilha de dezenas de  folhas de papel amassasdas. A palavra certa não vinha, meu poema parecia muito bobô.
+
+Então usei uma metáfora qualquer que conecte o sentimento de tristeza com a chuva lá fora. Algo como: O céu está nublado, o coração também.\".
+
+Eu deveria escrever com um lápis..."
+resumo_descricao = "O tamanho de uma pilha de papéis está diretamente ligada a criativiade humana. Quanto maior o tamanho da pilha, maior o desempeho do cérebro humano."
+metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

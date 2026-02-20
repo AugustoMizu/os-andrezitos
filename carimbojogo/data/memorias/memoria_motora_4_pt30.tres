@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://kxdo82cmkrlw"]
+
+[ext_resource type="Script" uid="uid://b5xiaphv2h4ct" path="res://memorias.gd" id="1_5h4b5"]
+
+[resource]
+script = ExtResource("1_5h4b5")
+nome_doador = "Miguel"
+tipo = 2
+pontos = 30
+perigo = 0.4
+descricao = "Nossa! Foi a primeira fez que eu senti meus pulmões, eles estavam definitivamente queimando. Estava fazendo uma prova prática de educação-física, tive correr na quadra e pular uns obstáculos no caminho.
+
+Por que minha nota dependeria do quão rápido eu corro? Loucura isso aí."
+resumo_descricao = "Velocidade de corrrida é uma matéria-escolar básica do apreendizado humano. Dor é um indicador de eficiência e saúde do sistema respiratório."
+metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

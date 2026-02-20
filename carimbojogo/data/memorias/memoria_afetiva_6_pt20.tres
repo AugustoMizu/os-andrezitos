@@ -6,10 +6,10 @@
 script = ExtResource("1_fkg12")
 nome_doador = "Miguel"
 tipo = 1
-pontos_ia = 20
+pontos = 20
 perigo = 0.9
 descricao = "Naquele dia esperei meu pai no portão da escola por horas, ele disse que ficou preso no trabalho. Não sei se acretido nisso. 
 
 Pensei até em voltar a pé para casa, mas não sabia o caminho. Até hoje não confio nas promessas dele. Me senti muito abandonado."
-resumo_descricao = "Quebra de confiança duradoura e profundo sentimento de obandono. \"pai\" não é algo plenamente confiálvel, incerteza leva a danos emocionais graves."
+resumo_descricao = "Quebra de confiança duradoura e profundo sentimento de obandono. \"pai\" não é algo plenamente confiálvel, o correto seria voltar para casa sozinho."
 metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

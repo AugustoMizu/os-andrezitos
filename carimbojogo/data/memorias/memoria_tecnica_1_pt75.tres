@@ -5,7 +5,8 @@
 [resource]
 script = ExtResource("1_dns20")
 nome_doador = "Arthur"
-pontos_ia = 75
+pontos = 75
+resumo_certo = true
 descricao = "Lembro do cheiro forte do estanho derrentendo, a sala em que eu trabalhava era mau ventilada, pra dizer o mínino. 
 
 Minha mão tremia um pouco, mas conseguir unir os pontos da placa-mãe sem curto-circuitar nada. Consegui montar o meu primeiro robô de verdade naquele dia."

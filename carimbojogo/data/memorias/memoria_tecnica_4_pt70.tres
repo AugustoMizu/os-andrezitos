@@ -5,7 +5,8 @@
 [resource]
 script = ExtResource("1_4kel1")
 nome_doador = "Miguel"
-pontos_ia = 70
+pontos = 70
+resumo_certo = true
 descricao = "Não estava encontrando um defeito obvio no motor, tive que ouvir o barulho das válvulas por muito tempo até encontrar o erro no ritmo. 
 
 Foi só apertar um parafuso, o motor fez um som certo, sem perder combustível ou força para fazer o carro andar. 

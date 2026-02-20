@@ -6,9 +6,10 @@
 script = ExtResource("1_fny6c")
 nome_doador = "Beatriz"
 tipo = 1
-pontos_ia = 95
+pontos = 95
+resumo_certo = true
 descricao = "Uma vez ajudei um idoso a carregar as compras até o carro. Ele ficou muito agredecido pelo minha ajuda. Aquilo me fez perceber que a judar os outros me faz bem também. "
-resumo_descricao = "Altruísmo desinteressado e recompensa emocional por boas ações. Ações positivas o outros geram emoções boas em quem as fez.
+resumo_descricao = "Altruísmo desinteressado e recompensa emocional por boas ações. Ações positivas o outros geram emoções boas em quem às fez.
 
  Interressante."
 metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

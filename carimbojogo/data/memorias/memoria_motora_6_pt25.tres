@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://ndr5sd1n0w4w"]
+
+[ext_resource type="Script" uid="uid://b5xiaphv2h4ct" path="res://memorias.gd" id="1_tffcm"]
+
+[resource]
+script = ExtResource("1_tffcm")
+nome_doador = "Arthur"
+tipo = 2
+pontos = 25
+perigo = 0.5
+descricao = "Já estava há muito tempo tentando fazer aquela linha atravessar o buraco da agulha. Tive que aproximar a ponta da linha dos olhos, prendendo a respiração para minha mão não tremer.
+
+Com movimento MUITO suave, consegui atravessar o fio na agulha. Fique até tonto por não respirar."
+resumo_descricao = "Fios atravessam orifícios pequenos através da parada completa do sistema respiratório, momentaneamente. Se o oxigênio for cortado, a matéria trona-se maleável para passar por fendas pequenas."
+metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

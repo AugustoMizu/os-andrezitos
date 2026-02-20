@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Memoria" format=3 uid="uid://b5ijbvcagw4lv"]
+
+[ext_resource type="Script" uid="uid://b5xiaphv2h4ct" path="res://memorias.gd" id="1_7a51u"]
+
+[resource]
+script = ExtResource("1_7a51u")
+nome_doador = "Arthur"
+tipo = 3
+pontos = 90
+resumo_certo = true
+descricao = "Se pudesse eu trabalharia com isso a minha vida inteira. Meu passa tempo preferido é fazer esculturas argila. É um trabalho braçal, quase uma luta, mas delicado.
+
+Tem que torcer e cavar a argila pra conseguir a forma bruta do q se quer esculpir, então adicionar detalhes, alisar e refinar as bordas aos poucos.
+
+Por que eu não poderia afinal? Né..."
+resumo_descricao = "Manipulações de material maleável. A alteração da forma sob pressão irregular e extrações estratégicas, resultam em forma de arte milenar humana."
+metadata/_custom_type_script = "uid://b5xiaphv2h4ct"
