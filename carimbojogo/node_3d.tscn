@@ -1,0 +1,187 @@
+[gd_scene format=3 uid="uid://ctp6jcw7l644q"]
+
+[ext_resource type="Shader" uid="uid://b0lq3g6isqodd" path="res://node_3d.gdshader" id="3_a0tk4"]
+[ext_resource type="PackedScene" uid="uid://dm27tx8b2yj3m" path="res://ASCD.glb" id="3_jka67"]
+[ext_resource type="Script" uid="uid://df63wd6yqmgoe" path="res://camera_3d.gd" id="3_r3fl7"]
+[ext_resource type="PackedScene" uid="uid://d2uwiwnteg1dh" path="res://Escritorio (1).glb" id="4_r3fl7"]
+[ext_resource type="Script" uid="uid://57lpjbuqjwfa" path="res://static_body_3d.gd" id="5_jka67"]
+[ext_resource type="AudioStream" uid="uid://c0h6o1yeiy6t8" path="res://videoplayback.wav" id="6_i5arm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r3fl7"]
+shader = ExtResource("3_a0tk4")
+shader_parameter/wiggle = 0.03
+shader_parameter/wiggle_speed = 25.0
+shader_parameter/smear = 1.0
+shader_parameter/blur_samples = 15
+
+[sub_resource type="Compositor" id="Compositor_r3fl7"]
+
+[sub_resource type="Environment" id="Environment_noarx"]
+tonemap_mode = 3
+tonemap_exposure = 0.65
+tonemap_white = 21.2
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0, 0, 0, 1)
+fog_light_energy = 2.28
+fog_density = 1.0
+fog_sky_affect = 0.188
+fog_height = -188.42
+fog_depth_curve = 1.2311562
+fog_depth_begin = 0.0
+fog_depth_end = 20.0
+
+[sub_resource type="Compositor" id="Compositor_a0tk4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jka67"]
+albedo_color = Color(0, 0, 1, 1)
+metallic = 0.45
+metallic_specular = 0.68
+roughness = 0.38
+emission_enabled = true
+emission = Color(1.5883148e-06, 0, 0.61778224, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_i5arm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i5arm"]
+albedo_color = Color(0.91569537, 0.8085106, 0.31813323, 1)
+metallic = 0.41
+metallic_specular = 0.44
+normal_scale = 10.44
+ao_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_wc5p8"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_a0tk4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r3fl7"]
+metallic_specular = 0.0
+roughness = 0.0
+emission_enabled = true
+emission = Color(1, 1, 0.5411765, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r3fl7"]
+size = Vector3(0.5336914, 0.40795898, 0.5148926)
+
+[node name="Node3D" type="Node3D" unique_id=663807084]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=944117489]
+follow_viewport_enabled = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2073016756]
+material = SubResource("ShaderMaterial_r3fl7")
+offset_right = 1164.0
+offset_bottom = 655.0
+mouse_filter = 2
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=266796476]
+transform = Transform3D(-0.9992298, 0, -0.03924238, 0, 1, 0, 0.03924238, 0, -0.9992298, -0.7322406, 1.426625, 1.4246053)
+compositor = SubResource("Compositor_r3fl7")
+fov = 70.2
+near = 0.001
+script = ExtResource("3_r3fl7")
+
+[node name="InteractRay" type="RayCast3D" parent="Camera3D" unique_id=773392943]
+transform = Transform3D(0.9983301, -0.039102223, 0.04252335, 0.03910222, -0.08444307, -0.99566084, 0.042523354, 0.99566084, -0.08277306, 0, 0, -0.1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=572803361]
+environment = SubResource("Environment_noarx")
+compositor = SubResource("Compositor_a0tk4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1705498462]
+transform = Transform3D(0.0025474282, 0.9993724, -0.03533099, 0.07186998, -0.035422705, -0.9967848, -0.9974108, 7.003051e-10, -0.07191511, -0.018620191, 0.28398705, -10.847817)
+light_energy = 0.0
+light_indirect_energy = 0.0
+sky_mode = 1
+
+[node name="ASCD" parent="." unique_id=1165046585 instance=ExtResource("3_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9028816, 0, 2.5999038)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ASCD" unique_id=852910552]
+transform = Transform3D(0.23457095, 0.20423222, -3.3892151e-09, 2.8433565e-16, 1.26854225e-08, 0.23701705, 0.12828022, -0.37345544, 6.1974577e-09, -0.7274755, 1.4232035, -0.6759875)
+material_override = SubResource("StandardMaterial3D_jka67")
+mesh = SubResource("PlaneMesh_i5arm")
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=1572296874]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9380252, 2.682912, 2.2196972)
+light_color = Color(0.5603578, 0.6064213, 0.4414571, 1)
+light_energy = 0.49
+light_indirect_energy = 6.236
+light_negative = true
+
+[node name="Escritorio (1)" parent="." unique_id=767574245 instance=ExtResource("4_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.767729, 0, 2.5789094)
+
+[node name="Escritorio (1)2" parent="." unique_id=1900493358 instance=ExtResource("4_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.265184, 0, 2.622054)
+
+[node name="Escritorio (1)2" parent="Escritorio (1)2" unique_id=1967863211 instance=ExtResource("4_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.401649, 0, 2.5544624)
+
+[node name="Escritorio (1)2" parent="Escritorio (1)2/Escritorio (1)2" unique_id=914592215 instance=ExtResource("4_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.401649, 0, 0.0805645)
+
+[node name="Escritorio (1)2" parent="Escritorio (1)2/Escritorio (1)2/Escritorio (1)2" unique_id=592599477 instance=ExtResource("4_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.722441, 0, 0.0805645)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="." unique_id=1698473284]
+transform = Transform3D(16.420208, 0, 0, 0, 0.4352327, 0, 0, 0, 21.466736, 0, 2.8324637, 0)
+material_override = SubResource("StandardMaterial3D_i5arm")
+mesh = SubResource("BoxMesh_wc5p8")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=2006656792]
+transform = Transform3D(1, 0, 0, 0, -0.07186297, 0.9974145, 0, -0.9974145, -0.07186297, -0.93131536, 3.8651557, 2.039238)
+light_color = Color(0.7239605, 0.64128745, 0.10849439, 1)
+light_energy = 9.022
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 15.739
+light_size = 0.484
+spot_angle = 24.728287
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2123997449]
+transform = Transform3D(0.18516198, 0, 0, 0, -0.040779993, 0.0028575193, 0, -0.0006256781, -0.18624483, -0.93131536, 2.621178, 2.2351167)
+mesh = SubResource("CapsuleMesh_a0tk4")
+surface_material_override/0 = SubResource("StandardMaterial3D_r3fl7")
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=1109406713]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7728686, 2.0387459, 2.1506712)
+light_color = Color(0.5603578, 0.6064213, 0.4414571, 1)
+light_energy = 0.49
+light_indirect_energy = 6.236
+light_negative = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1699798474]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8313447, 1.5482181, 1.9644084)
+light_color = Color(0.783595, 0.55338, 7.70092e-07, 1)
+light_energy = 0.252
+light_indirect_energy = 0.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1509859484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.577267, 1.4643924, 1.2399523)
+light_color = Color(0.783595, 0.55338, 7.70092e-07, 1)
+light_energy = 0.02
+light_indirect_energy = 0.01
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1904482593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18647134, 1.0345457, 2.0562968)
+script = ExtResource("5_jka67")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1051931077]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2331543, 0.19274902, -0.08972168)
+shape = SubResource("BoxShape3D_r3fl7")
+
+[node name="Videoplayback" type="AudioStreamPlayer" parent="StaticBody3D" unique_id=803957530]
+stream = ExtResource("6_i5arm")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="StaticBody3D" unique_id=2046998479]
+transform = Transform3D(0.809673, 0, 0.5868813, 0, 1, 0, -0.5868813, 0, 0.809673, 0.38815597, 0.04111731, -0.08227086)
+stream = ExtResource("6_i5arm")
+attenuation_model = 1
+max_distance = 20.0
+emission_angle_enabled = true
+emission_angle_degrees = 19.0
