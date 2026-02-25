@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://ctp6jcw7l644q"]
 
+[ext_resource type="Script" uid="uid://cw3s6uqcarpc3" path="res://canvas_layer.gd" id="1_wc5p8"]
 [ext_resource type="Shader" uid="uid://b0lq3g6isqodd" path="res://node_3d.gdshader" id="3_a0tk4"]
 [ext_resource type="PackedScene" uid="uid://dm27tx8b2yj3m" path="res://ASCD.glb" id="3_jka67"]
 [ext_resource type="Script" uid="uid://df63wd6yqmgoe" path="res://camera_3d.gd" id="3_r3fl7"]
 [ext_resource type="PackedScene" uid="uid://d2uwiwnteg1dh" path="res://Escritorio (1).glb" id="4_r3fl7"]
-[ext_resource type="Script" uid="uid://57lpjbuqjwfa" path="res://static_body_3d.gd" id="5_jka67"]
+[ext_resource type="Script" path="res://static_body_3d.gd" id="5_jka67"]
 [ext_resource type="AudioStream" uid="uid://c0h6o1yeiy6t8" path="res://videoplayback.wav" id="6_i5arm"]
+[ext_resource type="PackedScene" uid="uid://bht6mhhr8e2f8" path="res://documento_interativo.tscn" id="8_jsk3o"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r3fl7"]
 shader = ExtResource("3_a0tk4")
@@ -66,12 +68,13 @@ emission_enabled = true
 emission = Color(1, 1, 0.5411765, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r3fl7"]
-size = Vector3(0.5336914, 0.40795898, 0.5148926)
+size = Vector3(0.49938965, 0.21533203, 0.32627106)
 
 [node name="Node3D" type="Node3D" unique_id=663807084]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=944117489]
 follow_viewport_enabled = true
+script = ExtResource("1_wc5p8")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2073016756]
 material = SubResource("ShaderMaterial_r3fl7")
@@ -79,8 +82,51 @@ offset_right = 1164.0
 offset_bottom = 655.0
 mouse_filter = 2
 
+[node name="JanelaLeitura" type="ColorRect" parent="CanvasLayer" unique_id=1015496456]
+visible = false
+offset_left = 276.0
+offset_top = 30.0
+offset_right = 736.0
+offset_bottom = 598.0
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="TextoDocumento" type="RichTextLabel" parent="CanvasLayer/JanelaLeitura" unique_id=597647335]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 23.0
+offset_right = 431.0
+offset_bottom = 496.0
+bbcode_enabled = true
+
+[node name="Fechar" type="Button" parent="CanvasLayer/JanelaLeitura" unique_id=761189614]
+layout_mode = 0
+offset_left = -272.0
+offset_top = -23.0
+offset_right = 749.0
+offset_bottom = 620.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer" unique_id=1150666707]
+layout_direction = 4
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/CenterContainer" unique_id=195479910]
+modulate = Color(1, 1, 1, 0.25)
+show_behind_parent = true
+layout_mode = 2
+text = "*"
+
 [node name="Camera3D" type="Camera3D" parent="." unique_id=266796476]
-transform = Transform3D(-0.9992298, 0, -0.03924238, 0, 1, 0, 0.03924238, 0, -0.9992298, -0.7322406, 1.426625, 1.4246053)
+transform = Transform3D(-0.9992298, 0, -0.03924238, 0, 1, 0, 0.03924238, 0, -0.9992298, -0.7322406, 1.426625, 1.3401136)
 compositor = SubResource("Compositor_r3fl7")
 fov = 70.2
 near = 0.001
@@ -99,8 +145,8 @@ light_energy = 0.0
 light_indirect_energy = 0.0
 sky_mode = 1
 
-[node name="ASCD" parent="." unique_id=1165046585 instance=ExtResource("3_jka67")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9028816, 0, 2.5999038)
+[node name="ASCD" parent="." unique_id=1460585791 instance=ExtResource("3_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90315187, -0.0025461912, 2.5994756)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ASCD" unique_id=852910552]
 transform = Transform3D(0.23457095, 0.20423222, -3.3892151e-09, 2.8433565e-16, 1.26854225e-08, 0.23701705, 0.12828022, -0.37345544, 6.1974577e-09, -0.7274755, 1.4232035, -0.6759875)
@@ -172,7 +218,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18647134, 1.0345457, 2.056
 script = ExtResource("5_jka67")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1051931077]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2331543, 0.19274902, -0.08972168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25030518, 0.09643555, -0.053043365)
 shape = SubResource("BoxShape3D_r3fl7")
 
 [node name="Videoplayback" type="AudioStreamPlayer" parent="StaticBody3D" unique_id=803957530]
@@ -185,3 +231,10 @@ attenuation_model = 1
 max_distance = 20.0
 emission_angle_enabled = true
 emission_angle_degrees = 19.0
+
+[node name="documentoInterativo" parent="." unique_id=1258872099 instance=ExtResource("8_jsk3o")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.51528805, 1.1319776, 2.0823371)
+
+[connection signal="pressed" from="CanvasLayer/JanelaLeitura/Fechar" to="CanvasLayer" method="_on_fechar_pressed"]
+
+[editable path="ASCD"]

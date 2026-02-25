@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bht6mhhr8e2f8"]
+
+[ext_resource type="Script" uid="uid://cnyq4lmvenm0f" path="res://documento_interativo.gd" id="1_o1gpq"]
+[ext_resource type="Resource" uid="uid://bqx1pmr7y858w" path="res://data/memorias/memoria_afetiva_1_pt90.tres" id="2_w15d3"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_w15d3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5esty"]
+lightmap_size_hint = Vector2i(21, 29)
+add_uv2 = true
+uv2_padding = 9.34
+size = Vector3(0.21, 0.001, 0.29)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jv0ih"]
+albedo_color = Color(0.89411765, 0.9098039, 0.93333334, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_w15d3"]
+lightmap_size_hint = Vector2i(21, 29)
+add_uv2 = true
+uv2_padding = 9.34
+size = Vector3(0.18, 0.001, 0.29)
+
+[sub_resource type="Gradient" id="Gradient_jk46o"]
+interpolation_mode = 1
+interpolation_color_space = 2
+offsets = PackedFloat32Array(0, 0.1, 0.100000024, 0.2, 0.3, 0.39999998, 0.5, 0.6, 0.7, 0.8, 0.9, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4gi56"]
+gradient = SubResource("Gradient_jk46o")
+width = 60
+fill_from = Vector2(0, 0.815)
+fill_to = Vector2(0, 0.96296304)
+repeat = 1
+metadata/_snap_enabled = true
+metadata/_snap_count = 36
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_03o1h"]
+albedo_texture = SubResource("GradientTexture2D_4gi56")
+uv1_scale = Vector3(0, 0.8, 1)
+uv1_offset = Vector3(0, 0.1, 0)
+texture_filter = 2
+stencil_flags = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fb53y"]
+size = Vector3(0.26685548, 0.06838867, 0.30307424)
+
+[node name="documentoInterativo" type="RigidBody3D" unique_id=1870518480]
+disable_mode = 2
+physics_material_override = SubResource("PhysicsMaterial_w15d3")
+script = ExtResource("1_o1gpq")
+dados_do_documento = ExtResource("2_w15d3")
+
+[node name="FolhasBranco" type="MeshInstance3D" parent="." unique_id=1085756319]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0.00012953207, 0.029604405, 0.038926885)
+mesh = SubResource("BoxMesh_5esty")
+surface_material_override/0 = SubResource("StandardMaterial3D_jv0ih")
+
+[node name="FolhaLinhas" type="MeshInstance3D" parent="." unique_id=1424265076]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0.0004153531, 0.03030543, 0.040043235)
+mesh = SubResource("BoxMesh_w15d3")
+surface_material_override/0 = SubResource("StandardMaterial3D_03o1h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1767027033]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.0029841345, 0.02652511, 0.0415928)
+shape = SubResource("BoxShape3D_fb53y")
+debug_color = Color(16.742508, 0, 12.702248, 1)
