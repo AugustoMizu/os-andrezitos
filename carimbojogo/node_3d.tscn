@@ -93,6 +93,9 @@ size = Vector3(0.36987305, 0.7020874, 0.7866211)
 transparency = 1
 albedo_texture = ExtResource("12_tcnuu")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_tuemg"]
+size = Vector3(3.7609863, 1, 2.392517)
+
 [node name="Node3D" type="Node3D" unique_id=663807084 node_paths=PackedStringArray("documento_papel", "lugar_pra_voltar", "lugar_pra_enviar", "camera_jogador")]
 script = ExtResource("1_tereu")
 documento_papel = NodePath("documentoInterativo")
@@ -187,7 +190,9 @@ objeto_misterioso = NodePath("../StaticBody3D3")
 som_sumico = NodePath("Somassustador")
 
 [node name="InteractRay" type="RayCast3D" parent="Camera3D" unique_id=773392943]
-transform = Transform3D(0.9983301, -0.039102223, 0.04252335, 0.03910222, -0.08444307, -0.99566084, 0.042523354, 0.99566084, -0.08277306, 0, 0, -0.1)
+transform = Transform3D(0.9983301, -0.039102435, 0.04252305, 0.039101936, -0.084442474, -0.99566084, 0.042523477, 0.99566084, -0.08277248, 0.0028409362, 0, -0.1723398)
+hit_from_inside = true
+collide_with_areas = true
 
 [node name="Somassustador" type="AudioStreamPlayer" parent="Camera3D" unique_id=38121307]
 stream = ExtResource("5_tuemg")
@@ -342,6 +347,36 @@ shape = SubResource("BoxShape3D_tcnuu")
 transform = Transform3D(-0.23476946, -1.4920361, 0.17488056, -0.10085949, -0.17032538, -0.8635596, 0.38550574, -0.95319766, -0.11943159, -0.26546186, -0.024723053, 0.0828464)
 mesh = SubResource("PlaneMesh_tuemg")
 surface_material_override/0 = SubResource("StandardMaterial3D_i0g27")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="." unique_id=43391552]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.99618196, 0, 1.3247979)
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="StaticBody3D4" unique_id=6559918]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.99618196, 0, 1.3247979)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D4" unique_id=521354265]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0629598, 0, -1.4661998)
+shape = SubResource("BoxShape3D_tuemg")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D4" unique_id=1235810188]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45666504, 1.1567338, -2.6751711)
+shape = SubResource("BoxShape3D_tuemg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D4" unique_id=150502929]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15222168, 0, -2.809807)
+shape = SubResource("BoxShape3D_tuemg")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D4" unique_id=425791535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4942913, 0.023589492, -1.2825062)
+shape = SubResource("BoxShape3D_tuemg")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D4" unique_id=1764464207]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5144963, 0.36990416, -2.8099496)
+shape = SubResource("BoxShape3D_tuemg")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D4" unique_id=1518503936]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8439603, 0, -1.0993035)
+shape = SubResource("BoxShape3D_tuemg")
 
 [connection signal="pressed" from="CanvasLayer/JanelaLeitura/Fechar" to="CanvasLayer" method="_on_fechar_pressed"]
 [connection signal="pressed" from="CanvasLayer/JanelaLeitura/Button" to="CanvasLayer" method="_on_aprovar_pressed"]

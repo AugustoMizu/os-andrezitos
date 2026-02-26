@@ -1,12 +1,12 @@
 extends Camera3D
 
 @export var mouse_sensitivity: float = 0.002
-@export var max_yaw_degrees: float = 120.0 
+@export var max_yaw_degrees: float = 121.0 
 @export var max_pitch_degrees: float = 80.0 
 @onready var interact_ray: RayCast3D = $InteractRay 
 
 @export var objeto_misterioso: Node3D 
-@export var tempo_para_aparecer: float = 15.0 
+@export var tempo_para_aparecer: float = 5 
 @export var tempo_para_sumir: float = 0.2    
 
 @export var som_sumico: AudioStreamPlayer 

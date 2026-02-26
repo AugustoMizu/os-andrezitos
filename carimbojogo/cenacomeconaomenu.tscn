@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://u45obcnspdr5"]
+
+[ext_resource type="Script" uid="uid://cw3s6uqcarpc3" path="res://canvas_layer.gd" id="1_04p7a"]
+[ext_resource type="Shader" uid="uid://b0lq3g6isqodd" path="res://node_3d.gdshader" id="2_xo46l"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jw82x"]
+shader = ExtResource("2_xo46l")
+shader_parameter/wiggle = 0.03
+shader_parameter/wiggle_speed = 25.0
+shader_parameter/smear = 1.0
+shader_parameter/blur_samples = 15
+
+[node name="Node3D" type="Node3D" unique_id=980808596]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1031999299]
+follow_viewport_enabled = true
+script = ExtResource("1_04p7a")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=589531173]
+material = SubResource("ShaderMaterial_jw82x")
+offset_right = 1164.0
+offset_bottom = 655.0
+mouse_filter = 2
+
+[node name="JanelaLeitura" type="ColorRect" parent="CanvasLayer" unique_id=978769584]
+visible = false
+offset_left = 276.0
+offset_top = 30.0
+offset_right = 736.0
+offset_bottom = 598.0
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="TextoDocumento" type="RichTextLabel" parent="CanvasLayer/JanelaLeitura" unique_id=548436506]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 23.0
+offset_right = 431.0
+offset_bottom = 496.0
+bbcode_enabled = true
+
+[node name="Fechar" type="Button" parent="CanvasLayer/JanelaLeitura" unique_id=1907948795]
+layout_mode = 0
+offset_left = -272.0
+offset_top = -23.0
+offset_right = 749.0
+offset_bottom = 620.0
+
+[node name="Button" type="Button" parent="CanvasLayer/JanelaLeitura" unique_id=1827693836]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 529.0
+offset_right = 91.0
+offset_bottom = 560.0
+text = "Aprovar"
+
+[node name="Button2" type="Button" parent="CanvasLayer/JanelaLeitura" unique_id=855211096]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 530.0
+offset_right = 190.0
+offset_bottom = 561.0
+text = "Reprovar"
+
+[node name="Button3" type="Button" parent="CanvasLayer/JanelaLeitura" unique_id=1770540113]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 534.0
+offset_right = 452.0
+offset_bottom = 565.0
+text = "Fechar"
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer" unique_id=1972595165]
+layout_direction = 4
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/CenterContainer" unique_id=134993302]
+modulate = Color(1, 1, 1, 0.25)
+show_behind_parent = true
+layout_mode = 2
+text = "pedro era vazio"
+
+[connection signal="pressed" from="CanvasLayer/JanelaLeitura/Fechar" to="CanvasLayer" method="_on_fechar_pressed"]
+[connection signal="pressed" from="CanvasLayer/JanelaLeitura/Button" to="CanvasLayer" method="_on_aprovar_pressed"]
+[connection signal="pressed" from="CanvasLayer/JanelaLeitura/Button2" to="CanvasLayer" method="_on_reprovar_pressed"]
+[connection signal="pressed" from="CanvasLayer/JanelaLeitura/Button3" to="CanvasLayer" method="_on_fechar_pressed"]
