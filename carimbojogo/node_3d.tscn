@@ -79,6 +79,9 @@ emission = Color(1, 1, 0.5411765, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_r3fl7"]
 size = Vector3(0.49938965, 0.21533203, 0.32627106)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_i0g27"]
+size = Vector3(0.21272278, 0.0034866333, 0.29397583)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_6iypd"]
 size = Vector3(0.10595703, 0.16320801, 0.121520996)
 
@@ -310,6 +313,10 @@ textura_reprovado = ExtResource("11_wlxy5")
 [node name="Decal" type="Decal" parent="documentoInterativo" unique_id=133612599]
 transform = Transform3D(1, 1.4097872e-09, 1.7483418e-07, -1.4097872e-09, -0.99986994, 0.016126085, 1.7483418e-07, -0.016126085, -0.99986994, -0.004738033, 0.049219847, 0.065135)
 size = Vector3(0.17054749, 0.05774784, 0.18978882)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="documentoInterativo" unique_id=337727339]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0002975464, 0.030467987, 0.039382935)
+shape = SubResource("BoxShape3D_i0g27")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1627043234]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12792197, 0.92266464, 2.1989074)
