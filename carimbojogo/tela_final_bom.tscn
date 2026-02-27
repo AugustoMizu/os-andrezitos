@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://byub1fg5aas2l"]
+
+[ext_resource type="Script" uid="uid://dnsw2rmbdotdk" path="res://tela_final.gd" id="1_wbq4q"]
+
+[node name="tela_final" type="Control" unique_id=2097761635]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wbq4q")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=950689035]
+layout_mode = 0
+offset_right = 1045.0
+offset_bottom = 663.0
+color = Color(0, 0, 0, 1)
+
+[node name="texto_final" type="Label" parent="." unique_id=1237393269]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 216.0
+offset_right = 847.0
+offset_bottom = 376.0
+text = "FINAL BOM: Você foi demitido e manteve sua humanidade!
+ Você fez um pessimo trabalho."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1259384258]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 419.0
+offset_right = 660.0
+offset_bottom = 506.0
+text = "SAIR"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

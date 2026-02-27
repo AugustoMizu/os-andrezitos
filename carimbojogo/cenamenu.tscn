@@ -1,0 +1,211 @@
+[gd_scene format=4 uid="uid://g6aigmr1q8iw"]
+
+[ext_resource type="PackedScene" uid="uid://dm27tx8b2yj3m" path="res://ASCD.glb" id="1_708ke"]
+[ext_resource type="Texture2D" uid="uid://de2wu0v2fdtg1" path="res://ASCD_Chao.png" id="1_ndnlw"]
+[ext_resource type="Script" uid="uid://dky1f1kcrat2y" path="res://cenamenu.gd" id="1_wp7q0"]
+[ext_resource type="Shader" uid="uid://b0lq3g6isqodd" path="res://node_3d.gdshader" id="3_dgkva"]
+[ext_resource type="Texture2D" uid="uid://bsa66hgwqbf85" path="res://Icone180x180.png" id="4_2bxmq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ihqp0"]
+resource_name = "Material"
+cull_mode = 2
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tcavq"]
+resource_name = "Material.013"
+cull_mode = 2
+albedo_texture = ExtResource("1_ndnlw")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ebtgp"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEABQAAAAIABQACAAYABwADAAAABwAAAAUAAwAHAAQABwAFAAYABwAGAAQA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("//8AAP//AAAAAP////8AAP///////wAAAAAAAP//AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAAAAA==")
+}, {
+"aabb": AABB(-1, 1, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Material.013",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAA//8AAAAAAAAAAAAA//8AAP//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dgkva"]
+resource_name = "ASCD_Cube"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"attribute_data": PackedByteArray("/1//P/+fAAD/n/8//18AAP9f////n/+//5////9f/7//H/9//1//P/9f/3//H/8//1//f/+f/z//n/9//1//P/9f/7//n/9//5//v/9f/38="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
+"material": SubResource("StandardMaterial3D_ihqp0"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAA//9U1QAA//8AAFTVAAD/////VNUAAAAAAABU1QAAAAAAAP+///8AAP///7///wAAAAD/vwAAAAD///+///8AAAAAVNX///////9U1f////8AAFTV//8AAP//VNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD///////////////////////9U1VTVVNVU1VTVVNVU1VTVAAD/fwAA/38AAP9/AAD/f6oqqiqqKqoqqiqqKqoqqir/v/+//7//v/+//7//v/+/")
+}, {
+"aabb": AABB(-1, 1, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray("YX//////yFT/////YX/IVA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_tcavq"),
+"name": "Material.013",
+"primitive": 3,
+"uv_scale": Vector4(3.0145695, 2.2645693, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAAAA//8AAAAA/////wAAAAAAAP////8AAP//////f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ebtgp")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2bxmq"]
+data = PackedVector3Array(1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wp7q0"]
+albedo_color = Color(0, 0, 1, 1)
+metallic = 0.45
+metallic_specular = 0.68
+roughness = 0.38
+emission_enabled = true
+emission = Color(1.5883148e-06, 0, 0.61778224, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cm502"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rid24"]
+albedo_color = Color(0.91569537, 0.8085106, 0.31813323, 1)
+metallic = 0.41
+metallic_specular = 0.44
+normal_scale = 10.44
+ao_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_jelk2"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_12gwg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8lwva"]
+metallic_specular = 0.0
+roughness = 0.0
+emission_enabled = true
+emission = Color(1, 1, 0.5411765, 1)
+
+[sub_resource type="Environment" id="Environment_ndnlw"]
+tonemap_mode = 3
+tonemap_exposure = 0.65
+tonemap_white = 21.2
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0, 0, 0, 1)
+fog_light_energy = 2.28
+fog_density = 1.0
+fog_sky_affect = 0.188
+fog_height = -188.42
+fog_depth_curve = 1.2311562
+fog_depth_begin = 0.0
+fog_depth_end = 20.0
+
+[sub_resource type="Compositor" id="Compositor_dgkva"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2bxmq"]
+shader = ExtResource("3_dgkva")
+shader_parameter/wiggle = 0.03
+shader_parameter/wiggle_speed = 25.0
+shader_parameter/smear = 1.0
+shader_parameter/blur_samples = 15
+
+[node name="Node3D" type="Node3D" unique_id=263839671]
+script = ExtResource("1_wp7q0")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1024145043]
+transform = Transform3D(-0.884947, 0, 0.46569178, 0, 1, 0, -0.46569178, 0, -0.884947, 0.3671432, 1.4302292, -0.57636476)
+
+[node name="Cube" type="MeshInstance3D" parent="." unique_id=1563066784]
+transform = Transform3D(5.435378, 0, 0, 0, 0.054089606, 0, 0, 0, 4.916528, -0.0042419434, -0.008956434, 0.001390338)
+mesh = SubResource("ArrayMesh_dgkva")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" unique_id=36103494]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" unique_id=1226833508]
+shape = SubResource("ConcavePolygonShape3D_2bxmq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=260419761]
+transform = Transform3D(0.23457095, 0.20423222, -3.3892151e-09, 2.8433565e-16, 1.26854225e-08, 0.23701705, 0.12828022, -0.37345544, 6.1974577e-09, 0.10993531, 1.4520692, -0.106813625)
+material_override = SubResource("StandardMaterial3D_wp7q0")
+mesh = SubResource("PlaneMesh_cm502")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="." unique_id=1010014108]
+transform = Transform3D(16.420208, 0, 0, 0, 0.4352327, 0, 0, 0, 21.466736, -0.0042419434, 2.8432946, 0.001390338)
+material_override = SubResource("StandardMaterial3D_rid24")
+mesh = SubResource("BoxMesh_jelk2")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1677835909]
+transform = Transform3D(1, 0, 0, 0, -0.07186297, 0.9974145, 0, -0.9974145, -0.07186297, 0.87647873, 3.8759866, -0.30579448)
+light_color = Color(0.7239605, 0.64128745, 0.10849439, 1)
+light_energy = 9.022
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 15.739
+light_size = 0.484
+spot_angle = 24.728287
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=764033258]
+transform = Transform3D(0.18516198, 0, 0, 0, -0.040779993, 0.0028575193, 0, -0.0006256781, -0.18624483, 0.87647873, 2.632009, -0.10991597)
+mesh = SubResource("CapsuleMesh_12gwg")
+surface_material_override/0 = SubResource("StandardMaterial3D_8lwva")
+
+[node name="ASCD" parent="." unique_id=137576405 instance=ExtResource("1_708ke")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8470421, 0.025375664, 0.576264)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1345482936]
+environment = SubResource("Environment_ndnlw")
+compositor = SubResource("Compositor_dgkva")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1144725146]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=258833854]
+material = SubResource("ShaderMaterial_2bxmq")
+offset_right = 1024.0
+offset_bottom = 648.0
+
+[node name="Icone180x180" type="Sprite2D" parent="CanvasLayer/ColorRect" unique_id=1879832424]
+position = Vector2(520, 247.99998)
+scale = Vector2(0.7222222, 0.67777777)
+texture = ExtResource("4_2bxmq")
+
+[node name="Button" type="Button" parent="CanvasLayer/ColorRect" unique_id=1213314143]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 312.0
+offset_right = 552.0
+offset_bottom = 343.0
+text = "Jogar"
+flat = true
+
+[node name="Button2" type="Button" parent="CanvasLayer/ColorRect" unique_id=1257779733]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 352.0
+offset_right = 552.0
+offset_bottom = 383.0
+text = "Sair"
+flat = true
+
+[connection signal="pressed" from="CanvasLayer/ColorRect/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/Button2" to="." method="_on_button_2_pressed"]

@@ -11,10 +11,15 @@ extends Node3D
 @export var lugar_pra_enviar: Area3D 
 @export var camera_jogador: Camera3D 
 
+@export_category("Cenas Finais")
+@export var cena_vitoria: PackedScene 
+@export var cena_derrota: PackedScene 
+
 
 var pool_memorias: Array[Memoria] = []
 var fila: Array[Memoria] = []
 var mesa_ocupada: bool = false
+var pontuacao_global: int = 0 # Variável para controlar os pontos
 
 func _ready() -> void:
 	carregar_memorias_da_pasta()
@@ -33,16 +38,21 @@ func carregar_memorias_da_pasta() -> void:
 		var nome_arquivo = dir.get_next()
 		
 		while nome_arquivo != "":
-			if not dir.current_is_dir() and nome_arquivo.ends_with(".tres"):
-				var caminho_completo = caminho_pasta + nome_arquivo
-				var memoria_carregada = load(caminho_completo) as Memoria
+			if not dir.current_is_dir():
+				# Remove o ".remap" se ele existir (acontece apenas no jogo exportado)
+				var arquivo_real = nome_arquivo.trim_suffix(".remap")
 				
-				if memoria_carregada and memoria_carregada != memoria_lore:
-					pool_memorias.append(memoria_carregada)
+				# Agora a checagem funciona yey!
+				if arquivo_real.ends_with(".tres"):
+					var caminho_completo = caminho_pasta + arquivo_real
+					var memoria_carregada = load(caminho_completo) as Memoria
 					
+					if memoria_carregada and memoria_carregada != memoria_lore:
+						pool_memorias.append(memoria_carregada)
+						
 			nome_arquivo = dir.get_next()
 			
-		print("Sucesso! ", pool_memorias.size(), " memórias carregadas automaticamente da pasta.")
+		print("Sucesso! ", pool_memorias.size(), " memórias carregadas automaticamente.")
 	else:
 		print("Erro: Não foi possível acessar a pasta ", caminho_pasta)
 
@@ -58,10 +68,6 @@ func montar_fila():
 		if i == posicao_lore and memoria_lore != null:
 			fila.append(memoria_lore)
 		else:
-			if pool_temporaria.is_empty():
-				pool_temporaria = pool_memorias.duplicate()
-				pool_temporaria.shuffle()
-				
 			var ultimo_item = pool_temporaria.pop_back()
 			fila.append(ultimo_item)
 			
@@ -70,6 +76,7 @@ func montar_fila():
 func imprimir_proximo_documento() -> void:
 	if fila.is_empty():
 		print("Não há mais documentos. Fim do expediente!")
+		finalizar_expediente() # Chama a função que verifica o treco
 		return
 		
 	var proxima_memoria = fila.pop_front()
@@ -98,6 +105,14 @@ func _on_lugar_pra_enviar_body_entered(body: Node3D) -> void:
 func processar_documento() -> void:
 	print("Documento carimbado como '", documento_papel.status_carimbo, "' enviado. Processando...")
 	
+	var memoria_atual = documento_papel.dados_do_documento as Memoria
+	
+
+	
+	if memoria_atual.resumo_certo == true and documento_papel.status_carimbo == "Aprovado":
+		pontuacao_global += 1
+		print("Ponto ganho! Pontuação atual: ", pontuacao_global)
+	
 	var som = lugar_pra_enviar.get_node_or_null("AudioStreamPlayer3D")
 	if som: som.play()
 	
@@ -113,3 +128,17 @@ func processar_documento() -> void:
 	await get_tree().create_timer(5.0).timeout
 	
 	imprimir_proximo_documento()
+
+func finalizar_expediente() -> void:
+	print("Expediente encerrado. Pontuação Final: ", pontuacao_global)
+	
+	if pontuacao_global >= 15:
+		if cena_vitoria:
+			get_tree().change_scene_to_packed(cena_vitoria)
+		else:
+			print("ERRO: cena_vitoria não foi definida no inspetor!")
+	else:
+		if cena_derrota:
+			get_tree().change_scene_to_packed(cena_derrota)
+		else:
+			print("ERRO: cena_derrota não foi definida no inspetor!")

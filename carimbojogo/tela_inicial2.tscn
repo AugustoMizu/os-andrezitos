@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://0c627t5rpdn5"]
+
+[ext_resource type="Script" uid="uid://dbo0djusltf2i" path="res://continuar.gd" id="1_tsbqt"]
+[ext_resource type="Texture2D" uid="uid://cbj6b1ewa3gt6" path="res://controles_felpojam_1.png" id="2_da6ub"]
+
+[node name="tela_inicial" type="Control" unique_id=1457119152]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1769652741]
+layout_mode = 0
+offset_right = 1040.0
+offset_bottom = 661.0
+color = Color(0, 0, 0, 1)
+
+[node name="continuar" type="Button" parent="." unique_id=1202821480]
+layout_mode = 0
+offset_left = 321.0
+offset_top = 416.0
+offset_right = 660.0
+offset_bottom = 477.0
+text = "CONTINUAR"
+script = ExtResource("1_tsbqt")
+
+[node name="Label" type="Label" parent="." unique_id=1726262534]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 208.0
+offset_right = 996.0
+offset_bottom = 361.0
+text = " \"O Basilisco não precisa de olhos para te ver.
+ Ele apenas precisa que você saiba que ele existe.
+ A contagem regressiva para a sua utilidade começou.\""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ControlesFelpojam1" type="Sprite2D" parent="." unique_id=1259856578]
+position = Vector2(480, 152)
+scale = Vector2(0.19083826, 0.19756812)
+texture = ExtResource("2_da6ub")
+
+[connection signal="pressed" from="continuar" to="continuar" method="_on_pressed"]

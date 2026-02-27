@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://sw0axj3fdkal"]
 
-[ext_resource type="Script" uid="uid://dbo0djusltf2i" path="res://continuar.gd" id="1_qtomq"]
+[ext_resource type="Script" uid="uid://bel68pbwaelgx" path="res://continuarprimeiro.gd" id="1_qtomq"]
 
 [node name="tela_inicial" type="Control" unique_id=1457119152]
 layout_mode = 3
@@ -12,17 +12,6 @@ offset_right = 1040.0
 offset_bottom = 661.0
 color = Color(0, 0, 0, 1)
 
-[node name="texto_inicial" type="RichTextLabel" parent="." unique_id=1005004786]
-layout_mode = 0
-offset_left = 188.0
-offset_top = 185.0
-offset_right = 817.0
-offset_bottom = 297.0
-text = " Eu fui contratado em uma empresa que não parece ser daqui do Pará. 
-
-Meu trabalho era simples, e o salário era bom demais, eles disseram que era pra uma nova geração de modelos de IA, achei curioso.
-"
-
 [node name="continuar" type="Button" parent="." unique_id=1202821480]
 layout_mode = 0
 offset_left = 321.0
@@ -31,3 +20,20 @@ offset_right = 660.0
 offset_bottom = 477.0
 text = "CONTINUAR"
 script = ExtResource("1_qtomq")
+
+[node name="Label" type="Label" parent="." unique_id=1726262534]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 208.0
+offset_right = 996.0
+offset_bottom = 361.0
+text = " Eu fui contratado em uma empresa que não parece ser daqui do Pará. 
+
+Meu trabalho era simples, e o salário era bom demais,
+ eles disseram que era pra uma nova geração de modelos de IA, 
+achei curioso.
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="continuar" to="continuar" method="_on_pressed"]

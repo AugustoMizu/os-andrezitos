@@ -6,7 +6,7 @@ extends Camera3D
 @onready var interact_ray: RayCast3D = $InteractRay 
 
 @export var objeto_misterioso: Node3D 
-@export var tempo_para_aparecer: float = 5 
+@export var tempo_para_aparecer: float =  180
 @export var tempo_para_sumir: float = 0.2    
 
 @export var som_sumico: AudioStreamPlayer 
