@@ -212,7 +212,7 @@ sky_mode = 1
 [node name="ASCD" parent="." unique_id=1460585791 instance=ExtResource("3_jka67")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90315187, -0.0025461912, 2.5994756)
 
-[node name="Cube_001" parent="ASCD" index="13" unique_id=1835355823]
+[node name="Cube_001" parent="ASCD" index="13" unique_id=1043196183]
 transform = Transform3D(0, 0, -0.16276088, 0, 0.16276087, 0, 0.16276088, 0, 0, -1.0628331, 1.1033608, -1.4090705)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ASCD" unique_id=852910552]
