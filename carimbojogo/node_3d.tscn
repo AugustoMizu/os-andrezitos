@@ -19,6 +19,7 @@
 [ext_resource type="Script" uid="uid://c4x4f52qvuj71" path="res://lugarpraenviar.gd" id="14_wlxy5"]
 [ext_resource type="AudioStream" uid="uid://dy0pe8hqd648o" path="res://pcrecebido.mp3" id="15_3v7ru"]
 [ext_resource type="AudioStream" uid="uid://bqmd47m2bngf8" path="res://data/memorias/Project_1.mp3" id="18_i0g27"]
+[ext_resource type="PackedScene" uid="uid://cvmigb48opm5u" path="res://tela_pause.tscn" id="20_jsnrv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r3fl7"]
 shader = ExtResource("3_a0tk4")
@@ -102,6 +103,12 @@ albedo_texture = ExtResource("12_tcnuu")
 [sub_resource type="BoxShape3D" id="BoxShape3D_tuemg"]
 size = Vector3(3.7609863, 1, 2.392517)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ealrb"]
+size = Vector3(2.811142, 0.4933014, 0.49189758)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jsnrv"]
+size = Vector3(0.3383789, 0.2664795, 1.6139585)
+
 [node name="Node3D" type="Node3D" unique_id=663807084 node_paths=PackedStringArray("documento_papel", "lugar_pra_voltar", "lugar_pra_enviar", "camera_jogador")]
 script = ExtResource("1_tereu")
 documento_papel = NodePath("documentoInterativo")
@@ -116,6 +123,7 @@ follow_viewport_enabled = true
 script = ExtResource("1_wc5p8")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2073016756]
+visible = false
 material = SubResource("ShaderMaterial_r3fl7")
 offset_right = 1164.0
 offset_bottom = 655.0
@@ -127,6 +135,7 @@ offset_left = 276.0
 offset_top = 30.0
 offset_right = 736.0
 offset_bottom = 598.0
+mouse_force_pass_scroll_events = false
 color = Color(0, 0, 0, 0.5019608)
 
 [node name="TextoDocumento" type="RichTextLabel" parent="CanvasLayer/JanelaLeitura" unique_id=597647335]
@@ -136,13 +145,6 @@ offset_top = 23.0
 offset_right = 431.0
 offset_bottom = 496.0
 bbcode_enabled = true
-
-[node name="Fechar" type="Button" parent="CanvasLayer/JanelaLeitura" unique_id=761189614]
-layout_mode = 0
-offset_left = -272.0
-offset_top = -23.0
-offset_right = 749.0
-offset_bottom = 620.0
 
 [node name="Button" type="Button" parent="CanvasLayer/JanelaLeitura" unique_id=1953358166]
 layout_mode = 0
@@ -213,6 +215,7 @@ compositor = SubResource("Compositor_a0tk4")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1705498462]
 transform = Transform3D(0.0025474282, 0.9993724, -0.03533099, 0.07186998, -0.035422705, -0.9967848, -0.9974108, 7.003051e-10, -0.07191511, -0.018620191, 0.28398705, -10.847817)
+visible = false
 light_energy = 0.0
 light_indirect_energy = 0.0
 sky_mode = 1
@@ -220,7 +223,7 @@ sky_mode = 1
 [node name="ASCD" parent="." unique_id=1460585791 instance=ExtResource("3_jka67")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90315187, -0.0025461912, 2.5994756)
 
-[node name="Cube_001" parent="ASCD" index="13" unique_id=1835355823]
+[node name="Cube_001" parent="ASCD" index="13" unique_id=1043196183]
 transform = Transform3D(0, 0, -0.16276088, 0, 0.16276087, 0, 0.16276088, 0, 0, -1.0628331, 1.1033608, -1.4090705)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ASCD" unique_id=852910552]
@@ -230,6 +233,7 @@ mesh = SubResource("PlaneMesh_i5arm")
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=1572296874]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9380252, 2.682912, 2.2196972)
+visible = false
 light_color = Color(0.5603578, 0.6064213, 0.4414571, 1)
 light_energy = 0.49
 light_indirect_energy = 6.236
@@ -272,15 +276,9 @@ transform = Transform3D(0.18516198, 0, 0, 0, -0.040779993, 0.0028575193, 0, -0.0
 mesh = SubResource("CapsuleMesh_a0tk4")
 surface_material_override/0 = SubResource("StandardMaterial3D_r3fl7")
 
-[node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=1109406713]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7728686, 2.0387459, 2.1506712)
-light_color = Color(0.5603578, 0.6064213, 0.4414571, 1)
-light_energy = 0.49
-light_indirect_energy = 6.236
-light_negative = true
-
 [node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1509859484]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.577267, 1.4643924, 1.2399523)
+visible = false
 light_color = Color(0.783595, 0.55338, 7.70092e-07, 1)
 light_energy = 0.02
 light_indirect_energy = 0.01
@@ -368,7 +366,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0629598, 0, -1.4661998)
 shape = SubResource("BoxShape3D_tuemg")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D4" unique_id=1235810188]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45666504, 1.1567338, -2.6751711)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45666504, 1.1567338, -2.7639728)
 shape = SubResource("BoxShape3D_tuemg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D4" unique_id=150502929]
@@ -391,9 +389,25 @@ shape = SubResource("BoxShape3D_tuemg")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5161462, 1.5453917, 1.0100412)
 shape = SubResource("BoxShape3D_tuemg")
 
-[connection signal="pressed" from="CanvasLayer/JanelaLeitura/Fechar" to="CanvasLayer" method="_on_fechar_pressed"]
+[node name="StaticBody3D" type="StaticBody3D" parent="StaticBody3D4" unique_id=567136074]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5873102, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D" unique_id=26724949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15935516, 0.067735314, 1.1304553)
+shape = SubResource("BoxShape3D_ealrb")
+debug_color = Color(0.76484627, 0.17087922, 0.99999994, 0.41960785)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D" unique_id=1724290833]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0221441, 0.08385527, 0.06376195)
+shape = SubResource("BoxShape3D_jsnrv")
+debug_color = Color(0.82775015, 0.0015359485, 0.9513746, 0.41960785)
+
+[node name="tela_pause" parent="." unique_id=776176110 instance=ExtResource("20_jsnrv")]
+process_mode = 3
+visible = false
+
 [connection signal="pressed" from="CanvasLayer/JanelaLeitura/Button" to="CanvasLayer" method="_on_aprovar_pressed"]
 [connection signal="pressed" from="CanvasLayer/JanelaLeitura/Button2" to="CanvasLayer" method="_on_reprovar_pressed"]
-[connection signal="pressed" from="CanvasLayer/JanelaLeitura/Button3" to="CanvasLayer" method="_on_fechar_pressed"]
+[connection signal="pressed" from="CanvasLayer/JanelaLeitura/Button3" to="CanvasLayer" method="_on_button_3_pressed"]
 
 [editable path="ASCD"]

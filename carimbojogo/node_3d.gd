@@ -125,20 +125,22 @@ func processar_documento() -> void:
 	
 	mesa_ocupada = false
 	
-	await get_tree().create_timer(5.0).timeout
+	await get_tree().create_timer(3.0).timeout
 	
 	imprimir_proximo_documento()
 
 func finalizar_expediente() -> void:
 	print("Expediente encerrado. Pontuação Final: ", pontuacao_global)
 	
-	if pontuacao_global >= 15:
-		if cena_vitoria:
-			get_tree().change_scene_to_packed(cena_vitoria)
-		else:
-			print("ERRO: cena_vitoria não foi definida no inspetor!")
-	else:
+	if pontuacao_global >= 7:
 		if cena_derrota:
 			get_tree().change_scene_to_packed(cena_derrota)
 		else:
 			print("ERRO: cena_derrota não foi definida no inspetor!")
+	else:		
+		if cena_vitoria:
+			get_tree().change_scene_to_packed(cena_vitoria)
+		else:
+			print("ERRO: cena_vitoria não foi definida no inspetor!")
+		
+		

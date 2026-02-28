@@ -1,25 +1,25 @@
 extends Camera3D
 
 @export var mouse_sensitivity: float = 0.002
-@export var max_yaw_degrees: float = 121.0 
-@export var max_pitch_degrees: float = 80.0 
-@onready var interact_ray: RayCast3D = $InteractRay 
+@export var max_yaw_degrees: float = 121.0
+@export var max_pitch_degrees: float = 80.0
+@onready var interact_ray: RayCast3D = $InteractRay
 
-@export var objeto_misterioso: Node3D 
+@export var objeto_misterioso: Node3D
 @export var tempo_para_aparecer: float =  180
-@export var tempo_para_sumir: float = 0.2    
+@export var tempo_para_sumir: float = 0.2
 
-@export var som_sumico: AudioStreamPlayer 
+@export var som_sumico: AudioStreamPlayer
 
 var ja_apareceu: bool = false
-var tempo_olhando: float = 0.0 
+var tempo_olhando: float = 0.0
 
 var yaw: float = 0.0
 var pitch: float = 0.0
 var start_yaw: float = 0.0
 
 var objeto_segurado: RigidBody3D = null
-var distancia_segurando: float = 1.0 
+var distancia_segurando: float = 1.0
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -28,7 +28,7 @@ func _ready() -> void:
 	pitch = rotation.x
 	
 	if objeto_misterioso:
-		objeto_misterioso.hide() 
+		objeto_misterioso.hide()
 		await get_tree().create_timer(tempo_para_aparecer).timeout
 		if is_instance_valid(objeto_misterioso):
 			objeto_misterioso.show()
@@ -36,17 +36,28 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		
+		if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	
+
+	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+		girar_camera(event.relative)
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		interagir(event)
+
+func interagir(event: InputEventMouseButton) ->void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if interact_ray.is_colliding():
 				var hit = interact_ray.get_collider()
 				if hit.has_method("interact"):
 					hit.interact()
-
-	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		girar_camera(event.relative)
+					#get_viewport().set_input_as_handled()
+					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _physics_process(delta: float) -> void:
 	if ja_apareceu and is_instance_valid(objeto_misterioso):
@@ -62,9 +73,9 @@ func _physics_process(delta: float) -> void:
 			if tempo_olhando >= tempo_para_sumir:
 				if som_sumico:
 					som_sumico.play()
-				objeto_misterioso.queue_free() 
+				objeto_misterioso.queue_free()
 		else:
-			tempo_olhando = 0.0 
+			tempo_olhando = 0.0
 
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT) and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		if objeto_segurado == null:
@@ -84,7 +95,7 @@ func pegar_objeto():
 		if colisor is RigidBody3D:
 			objeto_segurado = colisor
 			objeto_segurado.gravity_scale = 0.0
-			objeto_segurado.sleeping = false 
+			objeto_segurado.sleeping = false
 
 func soltar_objeto():
 	if objeto_segurado:

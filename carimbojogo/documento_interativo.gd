@@ -21,7 +21,6 @@ func interact():
 			var mensagem = "[b]Voluntário:[/b] " + dados_do_documento.nome_doador + "\n\n[b]Input de memória:[/b] \n" + dados_do_documento.descricao
 			mensagem += "\n\n[b]Resumo da memória:[/b] " + dados_do_documento.resumo_descricao
 			
-			# Envia o texto montado e o próprio papel (self) pra UI
 			ui.exibir_texto(mensagem, self)
 
 func aplicar_carimbo(tipo: String):

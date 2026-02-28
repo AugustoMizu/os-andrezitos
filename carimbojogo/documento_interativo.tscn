@@ -43,7 +43,7 @@ texture_filter = 2
 stencil_flags = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fb53y"]
-size = Vector3(0.26685548, 0.06838867, 0.30307424)
+size = Vector3(0.26916993, 0.06788574, 0.30307424)
 
 [node name="documentoInterativo" type="RigidBody3D" unique_id=1870518480]
 disable_mode = 2
@@ -62,6 +62,6 @@ mesh = SubResource("BoxMesh_w15d3")
 surface_material_override/0 = SubResource("StandardMaterial3D_03o1h")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1767027033]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.0029841345, 0.02652511, 0.0415928)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.0018269103, 0.026273645, 0.0415928)
 shape = SubResource("BoxShape3D_fb53y")
 debug_color = Color(16.742508, 0, 12.702248, 1)

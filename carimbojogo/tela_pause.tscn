@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cvmigb48opm5u"]
+
+[ext_resource type="Script" uid="uid://2hjkomr5hgvh" path="res://tela_pause.gd" id="1_dv8yj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b2hsj"]
+font_size = 45
+shadow_size = 9
+
+[node name="tela_pause" type="CanvasLayer" unique_id=776176110]
+process_mode = 2
+script = ExtResource("1_dv8yj")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=313462241]
+offset_right = 1041.0
+offset_bottom = 670.0
+color = Color(0.003921569, 0.003921569, 0.003921569, 0.56078434)
+
+[node name="Label" type="Label" parent="." unique_id=2047422793]
+offset_left = 344.0
+offset_top = 120.0
+offset_right = 720.0
+offset_bottom = 224.0
+text = "PAUSADO"
+label_settings = SubResource("LabelSettings_b2hsj")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1952485696]
+offset_left = 416.0
+offset_top = 192.0
+offset_right = 688.0
+offset_bottom = 240.0
+text = "Seu progresso não será salvo!!!"
+
+[node name="Sair" type="Button" parent="." unique_id=518640108]
+offset_left = 448.0
+offset_top = 416.0
+offset_right = 592.0
+offset_bottom = 504.0
+text = "SAIR SEM SALVAR"
+
+[node name="Continuar" type="Button" parent="." unique_id=2039436507]
+offset_left = 448.0
+offset_top = 312.0
+offset_right = 592.0
+offset_bottom = 384.0
+text = "CONTINUAR"
+
+[connection signal="pressed" from="Sair" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="Continuar" to="." method="_on_continuar_pressed"]

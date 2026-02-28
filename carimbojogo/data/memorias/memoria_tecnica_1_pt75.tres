@@ -7,8 +7,8 @@ script = ExtResource("1_dns20")
 nome_doador = "Arthur"
 pontos = 75
 resumo_certo = true
-descricao = "Lembro do cheiro forte do estanho derrentendo, a sala em que eu trabalhava era mau ventilada, pra dizer o mínino. 
+descricao = "Lembro do cheiro forte do estanho derrentendo, a sala em que eu trabalhava era mal ventilada, pra dizer o mínino. 
 
 Minha mão tremia um pouco, mas conseguir unir os pontos da placa-mãe sem curto-circuitar nada. Consegui montar o meu primeiro robô de verdade naquele dia."
-resumo_descricao = "Criar circuitos exigem precisão e liga metálica condutora e de fácil manipulação. Erro na solda imterrompe a lógica e pode comprometer todo o circuito."
+resumo_descricao = "Criar circuitos exigem precisão e liga metálica condutora e de fácil manipulação. Erro na solda interrompe a lógica e pode comprometer todo o circuito."
 metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

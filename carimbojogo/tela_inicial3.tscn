@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://2ixdwdmxbw2v"]
+
+[ext_resource type="Script" uid="uid://bmgatu6fxeyv" path="res://continuar_inicio.gd" id="1_p3y56"]
+[ext_resource type="Texture2D" uid="uid://b432xtet017jf" path="res://screenshot_3_enviando_doc.png" id="2_p3y56"]
+[ext_resource type="Texture2D" uid="uid://ci5y1l2x48cs8" path="res://screenshot_2_recebendo_doc.png" id="3_b285x"]
+
+[node name="Control" type="Control" unique_id=1139266591]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=624040267]
+layout_mode = 0
+offset_right = 1038.0
+offset_bottom = 661.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=207296652]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 113.0
+offset_right = 437.0
+offset_bottom = 209.0
+text = "Envie seus documentos em baixo da mesa."
+
+[node name="Label3" type="Label" parent="." unique_id=2117396405]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 115.0
+offset_right = 938.0
+offset_bottom = 211.0
+text = "Devolva e receba seus documentos no fax."
+
+[node name="continuar" type="Button" parent="." unique_id=508476437]
+layout_mode = 0
+offset_left = 346.0
+offset_top = 432.0
+offset_right = 685.0
+offset_bottom = 493.0
+text = "CONTINUAR"
+script = ExtResource("1_p3y56")
+
+[node name="como_enviar_doc" type="Sprite2D" parent="." unique_id=718630361]
+position = Vector2(264, 285.00003)
+scale = Vector2(0.17643234, 0.22430554)
+texture = ExtResource("2_p3y56")
+
+[node name="devolver_doc" type="Sprite2D" parent="." unique_id=767181655]
+position = Vector2(749, 280.00003)
+scale = Vector2(0.18138018, 0.21805555)
+texture = ExtResource("3_b285x")
+
+[connection signal="pressed" from="continuar" to="continuar" method="_on_continuar_pressed"]

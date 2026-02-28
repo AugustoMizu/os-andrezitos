@@ -22,7 +22,7 @@ func exibir_texto(conteudo: String, doc: RigidBody3D):
 		btn_aprovar.visible = false
 		btn_reprovar.visible = false
 		
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _on_aprovar_pressed():
 	if documento_atual and documento_atual.has_method("aplicar_carimbo"):
@@ -35,11 +35,12 @@ func _on_reprovar_pressed():
 	fechar_interface()
 
 
-func _on_fechar_pressed():
-	fechar_interface() 
-
 
 func fechar_interface():
 	janela.visible = false
 	documento_atual = null
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+
+func _on_button_3_pressed() -> void:
+	fechar_interface() 
