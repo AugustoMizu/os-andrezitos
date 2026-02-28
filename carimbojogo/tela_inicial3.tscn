@@ -32,7 +32,7 @@ offset_left = 608.0
 offset_top = 115.0
 offset_right = 938.0
 offset_bottom = 211.0
-text = "Devolva e receba seus documentos no fax."
+text = "Receba seus documentos no fax."
 
 [node name="continuar" type="Button" parent="." unique_id=508476437]
 layout_mode = 0

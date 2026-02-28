@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ctql31eocv6jj" path="res://node_3d.gd" id="1_tereu"]
 [ext_resource type="Script" uid="uid://cw3s6uqcarpc3" path="res://canvas_layer.gd" id="1_wc5p8"]
 [ext_resource type="PackedScene" uid="uid://byub1fg5aas2l" path="res://tela_final_bom.tscn" id="2_ealrb"]
+[ext_resource type="Resource" uid="uid://y0vrchh4ratx" path="res://data/memorias/memoria_criativa_2_pt35.tres" id="2_lggff"]
 [ext_resource type="Shader" uid="uid://b0lq3g6isqodd" path="res://node_3d.gdshader" id="3_a0tk4"]
 [ext_resource type="PackedScene" uid="uid://dm27tx8b2yj3m" path="res://ASCD.glb" id="3_jka67"]
 [ext_resource type="PackedScene" uid="uid://bnjhtms4pv5gn" path="res://tela_final_ruim.tscn" id="3_jsnrv"]
@@ -20,6 +21,7 @@
 [ext_resource type="AudioStream" uid="uid://dy0pe8hqd648o" path="res://pcrecebido.mp3" id="15_3v7ru"]
 [ext_resource type="AudioStream" uid="uid://bqmd47m2bngf8" path="res://data/memorias/Project_1.mp3" id="18_i0g27"]
 [ext_resource type="PackedScene" uid="uid://cvmigb48opm5u" path="res://tela_pause.tscn" id="20_jsnrv"]
+[ext_resource type="AudioStream" uid="uid://5y6cbdv6b8d6" path="res://audio_fax.mp3" id="20_s0gvp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r3fl7"]
 shader = ExtResource("3_a0tk4")
@@ -106,11 +108,12 @@ size = Vector3(3.7609863, 1, 2.392517)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ealrb"]
 size = Vector3(2.811142, 0.4933014, 0.49189758)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_jsnrv"]
-size = Vector3(0.3383789, 0.2664795, 1.6139585)
+[sub_resource type="BoxShape3D" id="BoxShape3D_s0gvp"]
+size = Vector3(0.7401123, 0.85357666, 1)
 
 [node name="Node3D" type="Node3D" unique_id=663807084 node_paths=PackedStringArray("documento_papel", "lugar_pra_voltar", "lugar_pra_enviar", "camera_jogador")]
 script = ExtResource("1_tereu")
+memoria_lore = ExtResource("2_lggff")
 documento_papel = NodePath("documentoInterativo")
 lugar_pra_voltar = NodePath("lugarpravoltar")
 lugar_pra_enviar = NodePath("lugarpraenviar")
@@ -335,12 +338,20 @@ shape = SubResource("BoxShape3D_tereu")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="lugarpraenviar" unique_id=717772244]
 stream = ExtResource("15_3v7ru")
+volume_db = -26.667
 
 [node name="lugarpravoltar" type="Marker3D" parent="." unique_id=1987338247]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5717283, 0.9760463, 1.3016939)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5717283, 1.0319463, 1.3016939)
+
+[node name="AudioNovoDoc" type="AudioStreamPlayer3D" parent="lugarpravoltar" unique_id=1363751290]
+stream = ExtResource("20_s0gvp")
+volume_db = -27.606
+max_distance = 5.11
+bus = &"Direita1"
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="." unique_id=1176980171]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.87350756, 2.413753, 2.9296556)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3" unique_id=1892690716]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.69567204, -0.3918805, -0.44193554)
@@ -353,9 +364,11 @@ surface_material_override/0 = SubResource("StandardMaterial3D_i0g27")
 
 [node name="StaticBody3D4" type="StaticBody3D" parent="." unique_id=43391552]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.99618196, 0, 1.3247979)
+visible = false
 
 [node name="StaticBody3D4" type="StaticBody3D" parent="StaticBody3D4" unique_id=6559918]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.99618196, 0, 1.3247979)
+visible = false
 
 [node name="CollisionShape3D7" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D4" unique_id=38773400]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1463282, 1.3277655, -2.686992)
@@ -391,16 +404,17 @@ shape = SubResource("BoxShape3D_tuemg")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="StaticBody3D4" unique_id=567136074]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5873102, 0)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D" unique_id=26724949]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15935516, 0.067735314, 1.1304553)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15935516, 0.08563089, 0.97298574)
 shape = SubResource("BoxShape3D_ealrb")
 debug_color = Color(0.76484627, 0.17087922, 0.99999994, 0.41960785)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D" unique_id=1724290833]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0221441, 0.08385527, 0.06376195)
-shape = SubResource("BoxShape3D_jsnrv")
-debug_color = Color(0.82775015, 0.0015359485, 0.9513746, 0.41960785)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D" unique_id=1003579849]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.993063, -0.11087817, 0)
+shape = SubResource("BoxShape3D_s0gvp")
+debug_color = Color(0.71734947, 0.25454065, 1, 0.41960785)
 
 [node name="tela_pause" parent="." unique_id=776176110 instance=ExtResource("20_jsnrv")]
 process_mode = 3

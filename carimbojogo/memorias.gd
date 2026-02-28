@@ -6,7 +6,7 @@ enum TipoMemoria {TECNICA, AFETIVA, MOTORA, CRIATIVA}
 @export                 var nome_doador: String = ""
 @export                 var tipo: TipoMemoria = TipoMemoria.TECNICA
 @export_range(0, 100)   var pontos: int = 0
-@export_range(0.0, 1.0) var perigo: float = 0.0 # nivel de incoerência(alucinações) no resumo da memoria que "corrempe" a "ia",
+@export				    var doc_inicial: bool = false #documento antes do personagem perder as memorias, não mostrar que a ia rouba memorias
 												# pode usar esse ou o "resumo_certo", leva ao final BOM 'demitido'
 
 @export                 var carimbo_aprovado: bool # o player carimbou essas memoria como 'aprovado' para enviar

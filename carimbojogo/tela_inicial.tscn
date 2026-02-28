@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://sw0axj3fdkal"]
 
 [ext_resource type="Script" uid="uid://bel68pbwaelgx" path="res://continuarprimeiro.gd" id="1_qtomq"]
+[ext_resource type="Texture2D" uid="uid://o37euqjmhw8j" path="res://data/assets/image/print_documento.PNG" id="2_g50o1"]
 
 [node name="tela_inicial" type="Control" unique_id=1457119152]
 layout_mode = 3
@@ -14,26 +15,42 @@ color = Color(0, 0, 0, 1)
 
 [node name="continuar" type="Button" parent="." unique_id=1202821480]
 layout_mode = 0
-offset_left = 321.0
-offset_top = 416.0
-offset_right = 660.0
-offset_bottom = 477.0
+offset_left = 336.0
+offset_top = 544.0
+offset_right = 675.0
+offset_bottom = 605.0
 text = "CONTINUAR"
 script = ExtResource("1_qtomq")
 
 [node name="Label" type="Label" parent="." unique_id=1726262534]
 layout_mode = 0
-offset_left = -24.0
-offset_top = 208.0
-offset_right = 996.0
-offset_bottom = 361.0
+offset_left = 112.0
+offset_top = 40.0
+offset_right = 895.0
+offset_bottom = 193.0
 text = " Eu fui contratado em uma empresa que não parece ser daqui do Pará. 
 
-Meu trabalho era simples, e o salário era bom demais,
- eles disseram que era pra uma nova geração de modelos de IA, 
+Meu trabalho era simples, LER e CARIMBAR DOCUMENTOS, o salário era bom demais,
+ eles disseram que era pra uma nova geração de modelos de IA que está em desenvolvimento, 
 achei curioso.
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1201395325]
+layout_mode = 0
+offset_left = 632.0
+offset_top = 240.0
+offset_right = 978.0
+offset_bottom = 393.0
+text = "Decida se o documento é útil 
+com base no Input e no Resumo "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PrintDocumento" type="Sprite2D" parent="." unique_id=1284080502]
+position = Vector2(504, 352.00003)
+scale = Vector2(0.31213304, 0.31745285)
+texture = ExtResource("2_g50o1")
 
 [connection signal="pressed" from="continuar" to="continuar" method="_on_pressed"]

@@ -7,11 +7,13 @@ script = ExtResource("1_7sd68")
 nome_doador = "Helena "
 tipo = 1
 pontos = 90
+doc_inicial = true
 resumo_certo = true
 descricao = "A vó fazia macarronada toda sábado na casa dela, a ar ficava carregado do cheiro de macarrão e o som das risadas de toda a família. 
 
 Eu nem gostava tanto de macarrão, minha parte favorita era ajudar minha vó a preparar o molho. Era eu que misturava o molho na panela.
 
 Parecia que nada de ruim poderia acontercer enquanto estivessésimos juntas."
-resumo_descricao = "Interação social positiva e forte senso de pertencimento familiar. Parece tudo certo."
+resumo_descricao = "
+Interação social positiva e forte senso de pertencimento familiar. Parece tudo certo."
 metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

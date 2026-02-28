@@ -7,7 +7,8 @@ script = ExtResource("1_yhr1y")
 nome_doador = "Maria"
 tipo = 1
 pontos = 60
-perigo = 0.4
+doc_inicial = true
 descricao = "Naquele dei o ultimo abraço no meu melhor amigo da escola antes dele mudar de cidade. Doeu muito, eu estava feliz por ter conhecido ele naquele ano, mas... não me importava o motivo, não queria que ele fosse embora."
-resumo_descricao = "Sentimento agridoce envolvendo gratidão e perda inevitável. Se \"amigo\" vai embora, é melhor não telo."
+resumo_descricao = "
+Sentimento agridoce envolvendo gratidão e perda inevitável. Se \"amigo\" vai embora, é melhor não telo."
 metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

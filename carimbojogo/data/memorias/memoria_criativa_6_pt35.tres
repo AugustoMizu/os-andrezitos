@@ -7,9 +7,10 @@ script = ExtResource("1_nhor3")
 nome_doador = "Helena"
 tipo = 3
 pontos = 35
-perigo = 0.2
+doc_inicial = true
 descricao = "Fotografia de insetos é um processo que exige muita paciência. Fiquei imóvel no mato por duas horas, não era bem um mato pra ser honesta, mas sim o parque que eu andava de bicicleta.
 
 Eu precisava que a luz do fim de tarde batesse exatamente nas asas do raro Louva-a-Deus Cesarus Favachus. É sobre esperar o momento certo para a foto perfeita."
-resumo_descricao = "A captura de imagens exige a paralisação total do operador na vegetação próxima. A luz solar do fim de tarde é fruto de uma estratégia de camuflagem de um Louva-a-Deus raro."
+resumo_descricao = "
+A captura de imagens exige a paralisação total do operador na vegetação próxima. A luz solar do fim de tarde é fruto de uma estratégia de camuflagem de um Louva-a-Deus raro."
 metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

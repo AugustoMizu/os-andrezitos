@@ -1,19 +1,21 @@
 extends Node3D
 
 @export_category("Configuração de Memórias")
-@export var memoria_lore: Memoria # Continue arrastando a memória principal da história aq
-@export var posicao_lore: int = 7 
+@export var memoria_lore: Memoria
+@export var posicao_lore: int = 7 # posição do doc da beatriz imolação na lista, lore do jogo
 @export var total_documentos: int = 15
+@export var qtd_docs_inicial: int = 3 # quantidade de docs no inicio sem menção a perda de memoria
+# posicao_lore e qtd_docs_inicial NÃO pode ser maior que o total_documentos
 
 @export_category("Referências da Cena")
 @export var documento_papel: RigidBody3D
-@export var lugar_pra_voltar: Node3D 
-@export var lugar_pra_enviar: Area3D 
-@export var camera_jogador: Camera3D 
+@export var lugar_pra_voltar: Node3D
+@export var lugar_pra_enviar: Area3D
+@export var camera_jogador: Camera3D
 
 @export_category("Cenas Finais")
-@export var cena_vitoria: PackedScene 
-@export var cena_derrota: PackedScene 
+@export var cena_vitoria: PackedScene
+@export var cena_derrota: PackedScene
 
 
 var pool_memorias: Array[Memoria] = []
@@ -22,9 +24,11 @@ var mesa_ocupada: bool = false
 var pontuacao_global: int = 0 # Variável para controlar os pontos
 
 func _ready() -> void:
+	randomize()
 	carregar_memorias_da_pasta()
 	
 	lugar_pra_enviar.body_entered.connect(_on_lugar_pra_enviar_body_entered)
+	
 
 	montar_fila()
 	imprimir_proximo_documento()
@@ -64,14 +68,29 @@ func montar_fila():
 	pool_memorias.shuffle()
 	var pool_temporaria = pool_memorias.duplicate()
 	
-	for i in range(total_documentos):
+	var docs_iniciais = [] # sem lore
+	var docs_comuns = [] # com lore
+
+	for doc in pool_temporaria:
+		if doc.get("doc_inicial") == true:
+			docs_iniciais.append(doc)
+		else:
+			docs_comuns.append(doc)
+		
+	for i in total_documentos:
 		if i == posicao_lore and memoria_lore != null:
 			fila.append(memoria_lore)
 		else:
-			var ultimo_item = pool_temporaria.pop_back()
-			fila.append(ultimo_item)
-			
+			if fila.size() < qtd_docs_inicial and docs_iniciais.size() > 0:
+				fila.append(docs_iniciais.pop_back())
+			else:
+				if docs_iniciais.size() > 0: 
+					fila.append(docs_iniciais.pop_back())
+				elif docs_comuns.size() > 0:
+					fila.append(docs_comuns.pop_back())
+					
 	print("Fila montada com ", fila.size(), " documentos.")
+	print("Documentos na fila \n", fila)
 
 func imprimir_proximo_documento() -> void:
 	if fila.is_empty():
@@ -94,6 +113,9 @@ func imprimir_proximo_documento() -> void:
 	
 	documento_papel.visible = true
 	mesa_ocupada = true
+	
+	var som = get_node_or_null("lugarpravoltar/AudioNovoDoc")
+	if som: som.play()
 
 func _on_lugar_pra_enviar_body_entered(body: Node3D) -> void:
 	if body == documento_papel:
@@ -107,11 +129,15 @@ func processar_documento() -> void:
 	
 	var memoria_atual = documento_papel.dados_do_documento as Memoria
 	
-
-	
-	if memoria_atual.resumo_certo == true and documento_papel.status_carimbo == "Aprovado":
+	if memoria_atual.resumo_certo == true and documento_papel.status_carimbo == "aprovado":
 		pontuacao_global += 1
-		print("Ponto ganho! Pontuação atual: ", pontuacao_global)
+		print("\nPonto ganho! Pontuação atual: ", pontuacao_global)		
+	elif memoria_atual.resumo_certo == false and documento_papel.status_carimbo == "reprovado":
+		pontuacao_global += 1
+		print("\nPonto ganho! Pontuação atual: ", pontuacao_global)		
+	else:
+		pontuacao_global -= 1
+		print("\nPonto ganho! Pontuação atual: ", pontuacao_global)		
 	
 	var som = lugar_pra_enviar.get_node_or_null("AudioStreamPlayer3D")
 	if som: som.play()
@@ -119,7 +145,7 @@ func processar_documento() -> void:
 	if camera_jogador.objeto_segurado == documento_papel:
 		camera_jogador.soltar_objeto()
 		
-	documento_papel.visible = false 
+	documento_papel.visible = false
 	documento_papel.freeze = true
 	documento_papel.global_position = Vector3(0, -100, 0)
 	
@@ -137,7 +163,7 @@ func finalizar_expediente() -> void:
 			get_tree().change_scene_to_packed(cena_derrota)
 		else:
 			print("ERRO: cena_derrota não foi definida no inspetor!")
-	else:		
+	else:
 		if cena_vitoria:
 			get_tree().change_scene_to_packed(cena_vitoria)
 		else:

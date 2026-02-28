@@ -7,13 +7,15 @@ script = ExtResource("1_1ir7x")
 nome_doador = "Helena"
 tipo = 3
 pontos = 70
+doc_inicial = true
 resumo_certo = true
 descricao = "Meu ritual para desenvolver uma coreografia no improviso é: eu coloco alguma música que gosto em loop, geralmente alguma da Dona Onete, a rainha do Carimbó.
 
 Então fico de frente ao espelho e deixo meu corpo solto, fazendo movimentos no ritmo da música. Tropeço várias vezes, mas o segredo é errar de novo na próxima batida pra parecer proposital.
 
 Eventualmente meus movimentos começam a fazer sentido com a música."
-resumo_descricao = "Sincronização de movimentos com padrões sonoros. A improvisação de danças pode transformar erros de equilíbrio em passos ritimados.
+resumo_descricao = "
+Sincronização de movimentos com padrões sonoros. A improvisação de danças pode transformar erros de equilíbrio em passos ritimados.
 
 Francamente."
 metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

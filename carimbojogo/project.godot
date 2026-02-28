@@ -13,6 +13,11 @@ config_version=5
 config/name="carimbojogoo"
 run/main_scene="uid://g6aigmr1q8iw"
 config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="uid://bsa66hgwqbf85"
+
+[audio]
+
+buses/default_bus_layout=""
 
 [autoload]
 

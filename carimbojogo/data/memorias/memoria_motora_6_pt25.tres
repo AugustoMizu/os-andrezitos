@@ -7,9 +7,10 @@ script = ExtResource("1_tffcm")
 nome_doador = "Arthur"
 tipo = 2
 pontos = 25
-perigo = 0.5
+doc_inicial = true
 descricao = "Já estava há muito tempo tentando fazer aquela linha atravessar o buraco da agulha. Tive que aproximar a ponta da linha dos olhos, prendendo a respiração para minha mão não tremer.
 
 Com movimento MUITO suave, consegui atravessar o fio na agulha. Fique até tonto por não respirar."
-resumo_descricao = "Fios atravessam orifícios pequenos através da parada completa do sistema respiratório, momentaneamente. Se o oxigênio for cortado, a matéria trona-se maleável para passar por fendas pequenas."
+resumo_descricao = "
+Fios atravessam orifícios pequenos através da parada completa do sistema respiratório, momentaneamente. Se o oxigênio for cortado, a matéria trona-se maleável para passar por fendas pequenas."
 metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

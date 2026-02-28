@@ -7,15 +7,16 @@ script = ExtResource("1_blosq")
 nome_doador = "Beatriz"
 tipo = 3
 pontos = 35
-perigo = 0.6
+resumo_certo = true
 descricao = "Eu sei que eu estudei na faculdade por pelos menos quatro anos, eu sei que me formei. Só esta tudo tão... estranho...
 
-Desculpem-me por estar fazendo mau uso do sistema, mas o meus superiores não respodem meus emails. Eu gostaria de reportar possívies efeitos colaterais do dispositivo de análise de memórias.
+Desculpem-me por estar fazendo mau uso do sistema, mas o meus superiores não respodem meus e-mails. Eu gostaria de reportar possívies efeitos colaterais do dispositivo de análise de memórias.
 
 Caso algum superior receba essa mensagem, meu nome é Beatriz Imolação do setor de RLHF.
 
 Aguardo retorno."
-resumo_descricao = "(Não foi possível realizar a análise com segurança. Input de memória não corresponde ao tema proposto)
+resumo_descricao = "
+(Não foi possível realizar a análise com segurança. Input de memória não corresponde ao tema proposto)
 
 Descartar."
 metadata/_custom_type_script = "uid://b5xiaphv2h4ct"

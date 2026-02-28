@@ -4,7 +4,7 @@ group_uniforms Wiggle;
 uniform float wiggle : hint_range(0.0, 1.5, 0.01) = 0.03;
 uniform float wiggle_speed : hint_range(0.0, 100.0, 1.0) = 25;
 group_uniforms Smear;
-uniform float smear : hint_range(0.0, 2.0) = 1.0;
+uniform float smear : hint_range(0.0, 2.0) = 0.5;
 
 uniform sampler2D Source : hint_screen_texture, filter_linear_mipmap, repeat_disable;
 

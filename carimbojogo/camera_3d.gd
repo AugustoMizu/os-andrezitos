@@ -57,7 +57,7 @@ func interagir(event: InputEventMouseButton) ->void:
 				if hit.has_method("interact"):
 					hit.interact()
 					#get_viewport().set_input_as_handled()
-					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+					#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _physics_process(delta: float) -> void:
 	if ja_apareceu and is_instance_valid(objeto_misterioso):

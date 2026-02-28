@@ -22,6 +22,7 @@ func interact():
 			mensagem += "\n\n[b]Resumo da memória:[/b] " + dados_do_documento.resumo_descricao
 			
 			ui.exibir_texto(mensagem, self)
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func aplicar_carimbo(tipo: String):
 	status_carimbo = tipo
