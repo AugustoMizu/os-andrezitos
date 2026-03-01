@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dbo0djusltf2i" path="res://continuar.gd" id="1_tsbqt"]
 [ext_resource type="Texture2D" uid="uid://cbj6b1ewa3gt6" path="res://controles_felpojam_1.png" id="2_da6ub"]
 
-[node name="tela_inicial" type="Control" unique_id=1457119152]
+[node name="Control" type="Control" unique_id=1457119152]
 layout_mode = 3
 anchors_preset = 0
 
