@@ -14,6 +14,7 @@ config/name="carimbojogoo"
 run/main_scene="uid://g6aigmr1q8iw"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://bsa66hgwqbf85"
+config/windows_native_icon="res://data/assets/image/Icone180x180.ico"
 
 [audio]
 
@@ -32,6 +33,7 @@ window/stretch/mode="canvas_items"
 [editor]
 
 movie_writer/movie_file="C:/Users/Administrator/Documents/jogo jam.avi"
+export/convert_text_resources_to_binary=false
 
 [input]
 

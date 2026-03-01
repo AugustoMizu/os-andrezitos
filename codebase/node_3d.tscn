@@ -22,6 +22,8 @@
 [ext_resource type="AudioStream" uid="uid://bqmd47m2bngf8" path="res://data/memorias/Project_1.mp3" id="18_i0g27"]
 [ext_resource type="PackedScene" uid="uid://cvmigb48opm5u" path="res://tela_pause.tscn" id="20_jsnrv"]
 [ext_resource type="AudioStream" uid="uid://5y6cbdv6b8d6" path="res://audio_fax.mp3" id="20_s0gvp"]
+[ext_resource type="Texture2D" uid="uid://klljhse3mxvq" path="res://ASCD_Som.png" id="23_vxd74"]
+[ext_resource type="AudioStream" uid="uid://de4jfhyq7x080" path="res://audioinicio.wav" id="24_dhlwf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r3fl7"]
 shader = ExtResource("3_a0tk4")
@@ -60,7 +62,7 @@ metallic = 0.45
 metallic_specular = 0.68
 roughness = 0.38
 emission_enabled = true
-emission = Color(1.5883148e-06, 0, 0.61778224, 1)
+emission = Color(0, 0.31122905, 1.224127, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_i5arm"]
 
@@ -111,6 +113,12 @@ size = Vector3(2.811142, 0.4933014, 0.49189758)
 [sub_resource type="BoxShape3D" id="BoxShape3D_s0gvp"]
 size = Vector3(0.7401123, 0.85357666, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dhlwf"]
+albedo_color = Color(0, 0, 0, 1)
+albedo_texture = ExtResource("23_vxd74")
+emission_enabled = true
+emission_texture = ExtResource("23_vxd74")
+
 [node name="Node3D" type="Node3D" unique_id=663807084 node_paths=PackedStringArray("documento_papel", "lugar_pra_voltar", "lugar_pra_enviar", "camera_jogador")]
 script = ExtResource("1_tereu")
 memoria_lore = ExtResource("2_lggff")
@@ -126,7 +134,6 @@ follow_viewport_enabled = true
 script = ExtResource("1_wc5p8")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2073016756]
-visible = false
 material = SubResource("ShaderMaterial_r3fl7")
 offset_right = 1164.0
 offset_bottom = 655.0
@@ -226,21 +233,13 @@ sky_mode = 1
 [node name="ASCD" parent="." unique_id=1460585791 instance=ExtResource("3_jka67")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90315187, -0.0025461912, 2.5994756)
 
-[node name="Cube_001" parent="ASCD" index="13" unique_id=1043196183]
+[node name="Cube_001" parent="ASCD" index="13" unique_id=699899492]
 transform = Transform3D(0, 0, -0.16276088, 0, 0.16276087, 0, 0.16276088, 0, 0, -1.0628331, 1.1033608, -1.4090705)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ASCD" unique_id=852910552]
 transform = Transform3D(0.23457095, 0.20423222, -3.3892151e-09, 2.8433565e-16, 1.26854225e-08, 0.23701705, 0.12828022, -0.37345544, 6.1974577e-09, -0.7274755, 1.4232035, -0.6759875)
 material_override = SubResource("StandardMaterial3D_jka67")
 mesh = SubResource("PlaneMesh_i5arm")
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=1572296874]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9380252, 2.682912, 2.2196972)
-visible = false
-light_color = Color(0.5603578, 0.6064213, 0.4414571, 1)
-light_energy = 0.49
-light_indirect_energy = 6.236
-light_negative = true
 
 [node name="Escritorio (1)" parent="." unique_id=767574245 instance=ExtResource("4_r3fl7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.767729, 0, 2.5789094)
@@ -266,25 +265,18 @@ material_override = SubResource("StandardMaterial3D_i5arm")
 mesh = SubResource("BoxMesh_wc5p8")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=2006656792]
-transform = Transform3D(1, 0, 0, 0, -0.07186297, 0.9974145, 0, -0.9974145, -0.07186297, -0.93131536, 3.8651557, 2.039238)
+transform = Transform3D(1, 0, 0, 0, -0.07186297, 0.9974145, 0, -0.9974145, -0.07186297, -0.93131536, 3.832015, 2.039238)
 light_color = Color(0.7239605, 0.64128745, 0.10849439, 1)
-light_energy = 2.842
+light_energy = 7.912
 light_indirect_energy = 16.0
 light_volumetric_fog_energy = 15.739
 light_size = 0.484
-spot_angle = 24.728287
+spot_angle = 20.195753
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2123997449]
 transform = Transform3D(0.18516198, 0, 0, 0, -0.040779993, 0.0028575193, 0, -0.0006256781, -0.18624483, -0.93131536, 2.621178, 2.2351167)
 mesh = SubResource("CapsuleMesh_a0tk4")
 surface_material_override/0 = SubResource("StandardMaterial3D_r3fl7")
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1509859484]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.577267, 1.4643924, 1.2399523)
-visible = false
-light_color = Color(0.783595, 0.55338, 7.70092e-07, 1)
-light_energy = 0.02
-light_indirect_energy = 0.01
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1904482593]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18647134, 1.0345457, 2.0562968)
@@ -347,7 +339,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5717283, 1.0319463, 1.3016
 stream = ExtResource("20_s0gvp")
 volume_db = -27.606
 max_distance = 5.11
-bus = &"Direita1"
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="." unique_id=1176980171]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.87350756, 2.413753, 2.9296556)
@@ -419,6 +410,43 @@ debug_color = Color(0.71734947, 0.25454065, 1, 0.41960785)
 [node name="tela_pause" parent="." unique_id=776176110 instance=ExtResource("20_jsnrv")]
 process_mode = 3
 visible = false
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1933357354]
+transform = Transform3D(-0.8892808, 0, 0.45736176, 0, 1, 0, -0.45736176, 0, -0.8892808, -1.1904404, 1.3033986, 0.3550496)
+light_color = Color(0.20417023, 0.16578707, 0.040630735, 1)
+light_energy = 3.168
+spot_angle = 80.68197
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=1638394937]
+transform = Transform3D(0.2954155, -0.71648455, 0.63196486, 0.3034114, 0.697603, 0.64906985, -0.9059091, 6.5768994e-08, 0.4234723, -1.8968295, 1.1507778, 1.4380568)
+light_color = Color(0.5182677, 0.8384523, 0, 1)
+light_energy = 3.535
+spot_range = 0.12706055
+spot_angle = 20.040688
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="." unique_id=1996222210]
+transform = Transform3D(0.51721346, -0.8377217, -0.17525008, 0.35099334, 0.02086479, 0.9361455, -0.78057283, -0.54569864, 0.30482632, -1.3953229, 1.5865843, 1.6192062)
+light_color = Color(0.17168793, 0.40397054, 1, 1)
+light_energy = 4.705
+light_indirect_energy = 8.4
+spot_range = 1.297434
+spot_angle = 43.41545
+
+[node name="SpotLight3D" type="SpotLight3D" parent="SpotLight3D4" unique_id=1603725148]
+transform = Transform3D(0.8405765, 0.50861824, 0.18638295, -0.5415846, 0.78221774, 0.3079313, 0.010827415, -0.35978198, 0.9329737, 2.3507524, 1.3522215, 0.47392678)
+light_color = Color(1.2094979, 1.1001718, 0, 1)
+light_energy = 0.367
+spot_angle = 50.15526
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=425514310]
+transform = Transform3D(0.0030648792, -0.15248378, 0.23742214, 0.2496167, 0.034714565, -0.0034531597, 0.0011072282, 0.2994641, 0.12129304, -0.22213733, 1.4019125, -0.72460896)
+material_override = SubResource("StandardMaterial3D_dhlwf")
+mesh = SubResource("PlaneMesh_i5arm")
+
+[node name="Audioinicio" type="AudioStreamPlayer" parent="." unique_id=1810303065]
+stream = ExtResource("24_dhlwf")
+volume_db = 7.16
+autoplay = true
 
 [connection signal="pressed" from="CanvasLayer/JanelaLeitura/Button" to="CanvasLayer" method="_on_aprovar_pressed"]
 [connection signal="pressed" from="CanvasLayer/JanelaLeitura/Button2" to="CanvasLayer" method="_on_reprovar_pressed"]
