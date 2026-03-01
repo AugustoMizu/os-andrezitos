@@ -1,0 +1,455 @@
+[gd_scene format=3 uid="uid://ctp6jcw7l644q"]
+
+[ext_resource type="Script" uid="uid://ctql31eocv6jj" path="res://node_3d.gd" id="1_tereu"]
+[ext_resource type="Script" uid="uid://cw3s6uqcarpc3" path="res://canvas_layer.gd" id="1_wc5p8"]
+[ext_resource type="PackedScene" uid="uid://byub1fg5aas2l" path="res://tela_final_bom.tscn" id="2_ealrb"]
+[ext_resource type="Resource" uid="uid://y0vrchh4ratx" path="res://data/memorias/memoria_criativa_2_pt35.tres" id="2_lggff"]
+[ext_resource type="Shader" uid="uid://b0lq3g6isqodd" path="res://node_3d.gdshader" id="3_a0tk4"]
+[ext_resource type="PackedScene" uid="uid://dm27tx8b2yj3m" path="res://ASCD.glb" id="3_jka67"]
+[ext_resource type="PackedScene" uid="uid://bnjhtms4pv5gn" path="res://tela_final_ruim.tscn" id="3_jsnrv"]
+[ext_resource type="Script" uid="uid://df63wd6yqmgoe" path="res://camera_3d.gd" id="3_r3fl7"]
+[ext_resource type="PackedScene" uid="uid://d2uwiwnteg1dh" path="res://Escritorio (1).glb" id="4_r3fl7"]
+[ext_resource type="Script" uid="uid://57lpjbuqjwfa" path="res://static_body_3d.gd" id="5_jka67"]
+[ext_resource type="AudioStream" uid="uid://n8x1x3adb7hk" path="res://somassustador.mp3" id="5_tuemg"]
+[ext_resource type="PackedScene" uid="uid://bht6mhhr8e2f8" path="res://documento_interativo.tscn" id="8_jsk3o"]
+[ext_resource type="PackedScene" uid="uid://2oaq3ad5cu03" path="res://Carimbo.glb" id="9_4arys"]
+[ext_resource type="Script" uid="uid://bi7x8k1jap8ni" path="res://carimbo.gd" id="10_6iypd"]
+[ext_resource type="Texture2D" uid="uid://dhsgrx65eao7b" path="res://Approved-Red-Stamp-PNG-Image-Background.png" id="10_imku0"]
+[ext_resource type="Texture2D" uid="uid://decjpx40haqk2" path="res://letter-rejected-transparent-template-red-stamp-design-png.png" id="11_wlxy5"]
+[ext_resource type="Texture2D" uid="uid://dhgqp2f4wdink" path="res://medo.png" id="12_tcnuu"]
+[ext_resource type="Script" uid="uid://c4x4f52qvuj71" path="res://lugarpraenviar.gd" id="14_wlxy5"]
+[ext_resource type="AudioStream" uid="uid://dy0pe8hqd648o" path="res://pcrecebido.mp3" id="15_3v7ru"]
+[ext_resource type="AudioStream" uid="uid://bqmd47m2bngf8" path="res://data/memorias/Project_1.mp3" id="18_i0g27"]
+[ext_resource type="PackedScene" uid="uid://cvmigb48opm5u" path="res://tela_pause.tscn" id="20_jsnrv"]
+[ext_resource type="AudioStream" uid="uid://5y6cbdv6b8d6" path="res://audio_fax.mp3" id="20_s0gvp"]
+[ext_resource type="Texture2D" uid="uid://klljhse3mxvq" path="res://ASCD_Som.png" id="23_vxd74"]
+[ext_resource type="AudioStream" uid="uid://de4jfhyq7x080" path="res://audioinicio.wav" id="24_dhlwf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r3fl7"]
+shader = ExtResource("3_a0tk4")
+shader_parameter/wiggle = 0.03
+shader_parameter/wiggle_speed = 25.0
+shader_parameter/smear = 1.0
+shader_parameter/blur_samples = 15
+
+[sub_resource type="Compositor" id="Compositor_r3fl7"]
+
+[sub_resource type="Environment" id="Environment_noarx"]
+tonemap_mode = 3
+tonemap_exposure = 0.65
+tonemap_white = 21.2
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0, 0, 0, 1)
+fog_light_energy = 2.28
+fog_density = 1.0
+fog_sky_affect = 0.188
+fog_height = -188.42
+fog_depth_curve = 1.2311562
+fog_depth_begin = 0.0
+fog_depth_end = 20.0
+
+[sub_resource type="Compositor" id="Compositor_a0tk4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jka67"]
+albedo_color = Color(0, 0, 1, 1)
+metallic = 0.45
+metallic_specular = 0.68
+roughness = 0.38
+emission_enabled = true
+emission = Color(0, 0.31122905, 1.224127, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_i5arm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i5arm"]
+albedo_color = Color(0.91569537, 0.8085106, 0.31813323, 1)
+metallic = 0.41
+metallic_specular = 0.44
+normal_scale = 10.44
+ao_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_wc5p8"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_a0tk4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r3fl7"]
+metallic_specular = 0.0
+roughness = 0.0
+emission_enabled = true
+emission = Color(1, 1, 0.5411765, 1)
+emission_energy_multiplier = 0.25
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r3fl7"]
+size = Vector3(0.49938965, 0.21533203, 0.32627106)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i0g27"]
+size = Vector3(0.21272278, 0.0034866333, 0.29397583)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6iypd"]
+size = Vector3(0.10595703, 0.16320801, 0.121520996)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tereu"]
+size = Vector3(0.36987305, 0.7020874, 0.7866211)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tcnuu"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tuemg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i0g27"]
+transparency = 1
+albedo_texture = ExtResource("12_tcnuu")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tuemg"]
+size = Vector3(3.7609863, 1, 2.392517)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ealrb"]
+size = Vector3(2.811142, 0.4933014, 0.49189758)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s0gvp"]
+size = Vector3(0.7401123, 0.85357666, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dhlwf"]
+albedo_color = Color(0, 0, 0, 1)
+albedo_texture = ExtResource("23_vxd74")
+emission_enabled = true
+emission_texture = ExtResource("23_vxd74")
+
+[node name="Node3D" type="Node3D" unique_id=663807084 node_paths=PackedStringArray("documento_papel", "lugar_pra_voltar", "lugar_pra_enviar", "camera_jogador")]
+script = ExtResource("1_tereu")
+memoria_lore = ExtResource("2_lggff")
+documento_papel = NodePath("documentoInterativo")
+lugar_pra_voltar = NodePath("lugarpravoltar")
+lugar_pra_enviar = NodePath("lugarpraenviar")
+camera_jogador = NodePath("Camera3D")
+cena_vitoria = ExtResource("2_ealrb")
+cena_derrota = ExtResource("3_jsnrv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=944117489]
+follow_viewport_enabled = true
+script = ExtResource("1_wc5p8")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2073016756]
+material = SubResource("ShaderMaterial_r3fl7")
+offset_right = 1164.0
+offset_bottom = 655.0
+mouse_filter = 2
+
+[node name="JanelaLeitura" type="ColorRect" parent="CanvasLayer" unique_id=1015496456]
+visible = false
+offset_left = 276.0
+offset_top = 30.0
+offset_right = 736.0
+offset_bottom = 598.0
+mouse_force_pass_scroll_events = false
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="TextoDocumento" type="RichTextLabel" parent="CanvasLayer/JanelaLeitura" unique_id=597647335]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 23.0
+offset_right = 431.0
+offset_bottom = 496.0
+bbcode_enabled = true
+
+[node name="Button" type="Button" parent="CanvasLayer/JanelaLeitura" unique_id=1953358166]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 529.0
+offset_right = 91.0
+offset_bottom = 560.0
+text = "Aprovar"
+
+[node name="Button2" type="Button" parent="CanvasLayer/JanelaLeitura" unique_id=959270462]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 530.0
+offset_right = 190.0
+offset_bottom = 561.0
+text = "Reprovar"
+
+[node name="Button3" type="Button" parent="CanvasLayer/JanelaLeitura" unique_id=190452349]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 534.0
+offset_right = 452.0
+offset_bottom = 565.0
+text = "Fechar"
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer" unique_id=1150666707]
+layout_direction = 4
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/CenterContainer" unique_id=195479910]
+modulate = Color(1, 1, 1, 0.25)
+show_behind_parent = true
+layout_mode = 2
+text = "*"
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=266796476 node_paths=PackedStringArray("objeto_misterioso", "som_sumico")]
+transform = Transform3D(-0.9992298, 0, -0.03924238, 0, 1, 0, 0.03924238, 0, -0.9992298, -0.7322406, 1.426625, 1.3401136)
+compositor = SubResource("Compositor_r3fl7")
+fov = 70.2
+near = 0.001
+script = ExtResource("3_r3fl7")
+objeto_misterioso = NodePath("../StaticBody3D3")
+som_sumico = NodePath("Somassustador")
+
+[node name="InteractRay" type="RayCast3D" parent="Camera3D" unique_id=773392943]
+transform = Transform3D(0.9983301, -0.039102435, 0.04252305, 0.039101936, -0.084442474, -0.99566084, 0.042523477, 0.99566084, -0.08277248, 0.0028409362, 0, -0.1723398)
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="Somassustador" type="AudioStreamPlayer" parent="Camera3D" unique_id=38121307]
+stream = ExtResource("5_tuemg")
+volume_db = -11.319
+pitch_scale = 3.46
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=572803361]
+environment = SubResource("Environment_noarx")
+compositor = SubResource("Compositor_a0tk4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1705498462]
+transform = Transform3D(0.0025474282, 0.9993724, -0.03533099, 0.07186998, -0.035422705, -0.9967848, -0.9974108, 7.003051e-10, -0.07191511, -0.018620191, 0.28398705, -10.847817)
+visible = false
+light_energy = 0.0
+light_indirect_energy = 0.0
+sky_mode = 1
+
+[node name="ASCD" parent="." unique_id=1460585791 instance=ExtResource("3_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90315187, -0.0025461912, 2.5994756)
+
+[node name="Cube_001" parent="ASCD" index="13" unique_id=699899492]
+transform = Transform3D(0, 0, -0.16276088, 0, 0.16276087, 0, 0.16276088, 0, 0, -1.0628331, 1.1033608, -1.4090705)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ASCD" unique_id=852910552]
+transform = Transform3D(0.23457095, 0.20423222, -3.3892151e-09, 2.8433565e-16, 1.26854225e-08, 0.23701705, 0.12828022, -0.37345544, 6.1974577e-09, -0.7274755, 1.4232035, -0.6759875)
+material_override = SubResource("StandardMaterial3D_jka67")
+mesh = SubResource("PlaneMesh_i5arm")
+
+[node name="Escritorio (1)" parent="." unique_id=767574245 instance=ExtResource("4_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.767729, 0, 2.5789094)
+
+[node name="Escritorio (1)" parent="Escritorio (1)" unique_id=696842518 instance=ExtResource("4_r3fl7")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3.7330546, 0, -3.9932046)
+
+[node name="Escritorio (1)2" parent="." unique_id=1900493358 instance=ExtResource("4_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.265184, 0, 2.622054)
+
+[node name="Escritorio (1)2" parent="Escritorio (1)2" unique_id=1967863211 instance=ExtResource("4_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.401649, 0, 2.5544624)
+
+[node name="Escritorio (1)2" parent="Escritorio (1)2/Escritorio (1)2" unique_id=914592215 instance=ExtResource("4_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.401649, 0, 0.0805645)
+
+[node name="Escritorio (1)2" parent="Escritorio (1)2/Escritorio (1)2/Escritorio (1)2" unique_id=592599477 instance=ExtResource("4_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.722441, 0, 0.0805645)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="." unique_id=1698473284]
+transform = Transform3D(16.420208, 0, 0, 0, 0.4352327, 0, 0, 0, 21.466736, 0, 2.8324637, 0)
+material_override = SubResource("StandardMaterial3D_i5arm")
+mesh = SubResource("BoxMesh_wc5p8")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=2006656792]
+transform = Transform3D(1, 0, 0, 0, -0.07186297, 0.9974145, 0, -0.9974145, -0.07186297, -0.93131536, 3.832015, 2.039238)
+light_color = Color(0.7239605, 0.64128745, 0.10849439, 1)
+light_energy = 7.912
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 15.739
+light_size = 0.484
+spot_angle = 20.195753
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2123997449]
+transform = Transform3D(0.18516198, 0, 0, 0, -0.040779993, 0.0028575193, 0, -0.0006256781, -0.18624483, -0.93131536, 2.621178, 2.2351167)
+mesh = SubResource("CapsuleMesh_a0tk4")
+surface_material_override/0 = SubResource("StandardMaterial3D_r3fl7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1904482593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18647134, 1.0345457, 2.0562968)
+script = ExtResource("5_jka67")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1051931077]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25030518, 0.09643555, -0.053043365)
+shape = SubResource("BoxShape3D_r3fl7")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="StaticBody3D" unique_id=2046998479]
+transform = Transform3D(0.809673, 0, 0.5868813, 0, 1, 0, -0.5868813, 0, 0.809673, 0.38815597, 0.04111731, -0.08227086)
+stream = ExtResource("18_i0g27")
+attenuation_model = 1
+volume_db = -52.334
+max_distance = 20.0
+emission_angle_enabled = true
+emission_angle_degrees = 19.0
+parameters/looping = true
+
+[node name="documentoInterativo" parent="." unique_id=1258872099 instance=ExtResource("8_jsk3o")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.51528805, 1.1319776, 2.0823371)
+textura_aprovado = ExtResource("10_imku0")
+textura_reprovado = ExtResource("11_wlxy5")
+
+[node name="Decal" type="Decal" parent="documentoInterativo" unique_id=133612599]
+transform = Transform3D(1, 1.4097872e-09, 1.7483418e-07, -1.4097872e-09, -0.99986994, 0.016126085, 1.7483418e-07, -0.016126085, -0.99986994, -0.004738033, 0.049219847, 0.065135)
+size = Vector3(0.17054749, 0.05774784, 0.18978882)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="documentoInterativo" unique_id=337727339]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0002975464, 0.030467987, 0.039382935)
+shape = SubResource("BoxShape3D_i0g27")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1627043234]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12792197, 0.92266464, 2.1989074)
+script = ExtResource("10_6iypd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=957370828]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011474609, 0.10235596, -0.017913818)
+shape = SubResource("BoxShape3D_6iypd")
+
+[node name="Carimbo" parent="StaticBody3D2" unique_id=1214587897 instance=ExtResource("9_4arys")]
+transform = Transform3D(0.05897474, 0, 0, 0, 0.05982124, 0, 0, 0, 0.057349227, 0.016176939, 0.020772219, -0.021766901)
+
+[node name="lugarpraenviar" type="Area3D" parent="." unique_id=1427964269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28665292, 0.53029627, 2.2065032)
+script = ExtResource("14_wlxy5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="lugarpraenviar" unique_id=92414697]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14440918, -0.07284546, -0.10668945)
+shape = SubResource("BoxShape3D_tereu")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="lugarpraenviar" unique_id=717772244]
+stream = ExtResource("15_3v7ru")
+volume_db = -26.667
+
+[node name="lugarpravoltar" type="Marker3D" parent="." unique_id=1987338247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5717283, 1.0319463, 1.3016939)
+
+[node name="AudioNovoDoc" type="AudioStreamPlayer3D" parent="lugarpravoltar" unique_id=1363751290]
+stream = ExtResource("20_s0gvp")
+volume_db = -27.606
+max_distance = 5.11
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="." unique_id=1176980171]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.87350756, 2.413753, 2.9296556)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3" unique_id=1892690716]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.69567204, -0.3918805, -0.44193554)
+shape = SubResource("BoxShape3D_tcnuu")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D3" unique_id=516179956]
+transform = Transform3D(-0.23476946, -1.4920361, 0.17488056, -0.10085949, -0.17032538, -0.8635596, 0.38550574, -0.95319766, -0.11943159, -0.26546186, -0.024723053, 0.0828464)
+mesh = SubResource("PlaneMesh_tuemg")
+surface_material_override/0 = SubResource("StandardMaterial3D_i0g27")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="." unique_id=43391552]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.99618196, 0, 1.3247979)
+visible = false
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="StaticBody3D4" unique_id=6559918]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.99618196, 0, 1.3247979)
+visible = false
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D4" unique_id=38773400]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1463282, 1.3277655, -2.686992)
+shape = SubResource("BoxShape3D_tuemg")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D4" unique_id=521354265]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0629598, 0, -1.4661998)
+shape = SubResource("BoxShape3D_tuemg")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D4" unique_id=1235810188]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45666504, 1.1567338, -2.7639728)
+shape = SubResource("BoxShape3D_tuemg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D4" unique_id=150502929]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15222168, 0, -2.809807)
+shape = SubResource("BoxShape3D_tuemg")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D4" unique_id=425791535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4942913, 0.023589492, -1.2825062)
+shape = SubResource("BoxShape3D_tuemg")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D4" unique_id=1764464207]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5144963, 0.36990416, -2.8099496)
+shape = SubResource("BoxShape3D_tuemg")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D4" unique_id=1518503936]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8439603, 0, -1.0993035)
+shape = SubResource("BoxShape3D_tuemg")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D4" unique_id=141071998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5161462, 1.5453917, 1.0100412)
+shape = SubResource("BoxShape3D_tuemg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="StaticBody3D4" unique_id=567136074]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5873102, 0)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D" unique_id=26724949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15935516, 0.08563089, 0.97298574)
+shape = SubResource("BoxShape3D_ealrb")
+debug_color = Color(0.76484627, 0.17087922, 0.99999994, 0.41960785)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D4/StaticBody3D" unique_id=1003579849]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.993063, -0.11087817, 0)
+shape = SubResource("BoxShape3D_s0gvp")
+debug_color = Color(0.71734947, 0.25454065, 1, 0.41960785)
+
+[node name="tela_pause" parent="." unique_id=776176110 instance=ExtResource("20_jsnrv")]
+process_mode = 3
+visible = false
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1933357354]
+transform = Transform3D(-0.8892808, 0, 0.45736176, 0, 1, 0, -0.45736176, 0, -0.8892808, -1.1904404, 1.3033986, 0.3550496)
+light_color = Color(0.20417023, 0.16578707, 0.040630735, 1)
+light_energy = 3.168
+spot_angle = 80.68197
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=1638394937]
+transform = Transform3D(0.2954155, -0.71648455, 0.63196486, 0.3034114, 0.697603, 0.64906985, -0.9059091, 6.5768994e-08, 0.4234723, -1.8968295, 1.1507778, 1.4380568)
+light_color = Color(0.5182677, 0.8384523, 0, 1)
+light_energy = 3.535
+spot_range = 0.12706055
+spot_angle = 20.040688
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="." unique_id=1996222210]
+transform = Transform3D(0.51721346, -0.8377217, -0.17525008, 0.35099334, 0.02086479, 0.9361455, -0.78057283, -0.54569864, 0.30482632, -1.3953229, 1.5865843, 1.6192062)
+light_color = Color(0.17168793, 0.40397054, 1, 1)
+light_energy = 4.705
+light_indirect_energy = 8.4
+spot_range = 1.297434
+spot_angle = 43.41545
+
+[node name="SpotLight3D" type="SpotLight3D" parent="SpotLight3D4" unique_id=1603725148]
+transform = Transform3D(0.8405765, 0.50861824, 0.18638295, -0.5415846, 0.78221774, 0.3079313, 0.010827415, -0.35978198, 0.9329737, 2.3507524, 1.3522215, 0.47392678)
+light_color = Color(1.2094979, 1.1001718, 0, 1)
+light_energy = 0.367
+spot_angle = 50.15526
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=425514310]
+transform = Transform3D(0.0030648792, -0.15248378, 0.23742214, 0.2496167, 0.034714565, -0.0034531597, 0.0011072282, 0.2994641, 0.12129304, -0.22213733, 1.4019125, -0.72460896)
+material_override = SubResource("StandardMaterial3D_dhlwf")
+mesh = SubResource("PlaneMesh_i5arm")
+
+[node name="Audioinicio" type="AudioStreamPlayer" parent="." unique_id=1810303065]
+stream = ExtResource("24_dhlwf")
+volume_db = 7.16
+autoplay = true
+
+[connection signal="pressed" from="CanvasLayer/JanelaLeitura/Button" to="CanvasLayer" method="_on_aprovar_pressed"]
+[connection signal="pressed" from="CanvasLayer/JanelaLeitura/Button2" to="CanvasLayer" method="_on_reprovar_pressed"]
+[connection signal="pressed" from="CanvasLayer/JanelaLeitura/Button3" to="CanvasLayer" method="_on_button_3_pressed"]
+
+[editable path="ASCD"]
