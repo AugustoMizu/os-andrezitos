@@ -1,0 +1,14 @@
+ASSESTS DOMÍNIO PÚBLICO USADOS
+
+	FILTRO VHS
+
+https://godotshaders.com/shader/vhs/
+
+usado em ColorRect material->shader
+
+
+	ARTE APROVADO E REPROVADO
+
+www.pngarts.com/pt/explore/tag/
+
+usado em documentoInterativo
