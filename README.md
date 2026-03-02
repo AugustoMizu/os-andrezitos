@@ -38,6 +38,10 @@ usado em documentoInterativo
 
 Equipe:
 Augusto Mizu        | dev, roteirista
+
 Guilherme Keller    | dev, artista de Ambiente
+
 Tonim               | artista 3d
+
 Pyramid             | artista música 
+
